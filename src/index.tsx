@@ -10,7 +10,7 @@ const render = (renderApp) => {
 }
 
 if (module.hot) {
-    module.hot.accept(App, function () {
+    module.hot.accept('./App', function () {
         console.log('Accepting the updated printMe module!');
         app = require('./App').default
         render(app)
