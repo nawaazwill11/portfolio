@@ -1,0 +1,7 @@
+{
+    "presets": [
+        ["@babel/preset-env", { "targets": "> 0.2%, not dead" }],
+        ["@babel/preset-typescript", { "isTSX": true, "allExtensions": true }],
+        ["@babel/preset-react", { "runtime": "automatic" }]
+    ]
+}
