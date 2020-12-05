@@ -1,18 +1,23 @@
 // require('dotenv').config()
 
-const path = require('path')
-const fs = require('fs')
+import path from 'path'
+import fs from 'fs'
 
-const bundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const { HotModuleReplacementPlugin } = require('webpack')
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import { CleanWebpackPlugin } from 'clean-webpack-plugin'
+import { HotModuleReplacementPlugin } from 'webpack'
 
-const { NODE_ENV, WDS_PORT } = process.env
-const is_prod = NODE_ENV === 'production' ? true : false
+import {
+    NODE_ENV,
+    WDS_PORT,
+    IS_PROD,
+    DEV_SERVER_PUBLIC_PATH,
+    ASSET_PUBLIC_PATH
+} from './src/shared/config'
 
-console.log(is_prod)
+console.log(`WDS: Running in ${NODE_ENV} mode`)
 
 const pages_dir = './src/client/pages'
 const file_ext = ['.ts', '.tsx']
@@ -45,15 +50,20 @@ const htmlPlugins = (() => {
     })
 })()
 
-module.exports = {
+const config = {
+    mode: IS_PROD,
     entry,
     devServer: {
-        contentBase: path.join(__dirname, 'build/assests'),
+        contentBase: path.join(__dirname, 'dist'),
         compress: true,
         hot: true,
         port: WDS_PORT,
+        publicPath: DEV_SERVER_PUBLIC_PATH,
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+        }
     },
-    devtool: is_prod ? false : 'inline-source-map',
+    devtool: IS_PROD ? false : 'inline-source-map',
     module: {
         rules: [
             {
@@ -86,7 +96,12 @@ module.exports = {
                 include: /src/,
                 sideEffects: true,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: IS_PROD ? '/assets/' : `http://localhost:${WDS_PORT}/dist/`
+                        }
+                    },
                     'css-loader',
                     'sass-loader',
                 ]
@@ -100,7 +115,7 @@ module.exports = {
     output: {
         filename: 'js/[name].bundle.js',
         path: path.resolve(__dirname, 'build/assets'),
-        publicPath: '/assets/'
+        publicPath: ASSET_PUBLIC_PATH
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
@@ -113,7 +128,7 @@ module.exports = {
             chunkFilename: "[id].css",
         }),
         new HotModuleReplacementPlugin()
-        // new bundleAnalyzerPlugin(),
+        // new BundleAnalyzerPlugin(),
     ],
     optimization: {
         // runtimeChunk: 'single',
@@ -128,10 +143,14 @@ module.exports = {
             }
         }
     },
-    // watch: is_prod ? true : false,
+    // watch: IS_PROD ? true : false,
     watchOptions: {
         ignored: [
             'node_modules/**',
+            'package.json',
+            'src/server',
         ]
     }
 }
+
+export default config
