@@ -7,8 +7,8 @@
     "start": "babel src -d lib --extensions \".ts,.tsx\"",
     "dev:wds": "cross-env NODE_ENV=development WDS_PORT=7000 webpack serve",
     "dev:server": "cross-env NODE_ENV=development nodemon --exec babel-node --config-file ./babel.node.config.json --extensions --ignore src/client .ts,.js src/server",
-    "build": "rimraf build && babel --extensions .ts ./src/server -d ./build/server && cross-env NODE_ENV=production webpack --progress",
-    "prod:start": "cross-env NODE_ENV=production nodemon  build/server/index.js",
+    "build": "rimraf build && babel --extensions .ts,.js ./src --ignore ./src/client -d ./build && cross-env NODE_ENV=production webpack --progress",
+    "prod:start": "cross-env NODE_ENV=production nodemon  ./build/server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -1,6 +1,5 @@
 import ReactDOM from 'react-dom'
-
-
+import '../styles/index.scss'
 
 const Home = () => {
     return <h1>Home!!!!!!</h1>

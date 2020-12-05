@@ -3,11 +3,11 @@ import fs from 'fs'
 import path from 'path'
 import fetch from 'node-fetch'
 
-import { STATIC_PATH, PROD_STATIC_PATH, TEMPLATE_PATH, IS_PROD } from '../shared/config'
+import { PROD_STATIC_PATH, TEMPLATE_PATH, IS_PROD, ASSET_PATH } from '../shared/config'
 
 const app = express()
 
-app.use(STATIC_PATH, express.static(PROD_STATIC_PATH))
+app.use(ASSET_PATH, express.static(PROD_STATIC_PATH))
 
 app.get('*', (req, res, next) => {
     console.log(req.url)

@@ -51,7 +51,7 @@ const htmlPlugins = (() => {
 })()
 
 const config = {
-    mode: IS_PROD,
+    mode: NODE_ENV,
     entry,
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
@@ -80,15 +80,6 @@ const config = {
                         }
                     }
                 ],
-                // use: [
-                //     {
-                //         loader: 'ts-loader',
-                //         options: {
-                //             // configFile: './tsconfig.json', // !! WRONG
-                //             configFile: path.resolve('./ts.config.json'),    // CORRECT
-                //         },
-                //     }
-                // ],
                 exclude: /node_modules/,
             },
             {
@@ -124,7 +115,7 @@ const config = {
         new CleanWebpackPlugin({ cleanStaleWebpackAssets: true }),
         ...htmlPlugins,
         new MiniCssExtractPlugin({
-            filename: "[name].css",
+            filename: "css/[name].css",
             chunkFilename: "[id].css",
         }),
         new HotModuleReplacementPlugin()
