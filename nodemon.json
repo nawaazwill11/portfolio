@@ -1,0 +1,13 @@
+{
+    "ext": "ts, tsx",
+    "ignoreRoot": [
+        "node_modules/**",
+        "dist/**",
+        "src/client",
+        "package.json",
+        "nodemon.json"
+    ],
+    "watch": [
+        "src/server"
+    ]
+}
