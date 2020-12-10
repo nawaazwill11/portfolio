@@ -1,42 +1,28 @@
 import express from 'express'
 import fs from 'fs'
 import path from 'path'
-import fetch from 'node-fetch'
+import morgan from 'morgan'
 
-import { PROD_STATIC_PATH, TEMPLATE_PATH, IS_PROD, ASSET_PATH } from '../shared/config'
+import router from './router'
 
 const app = express()
+const log_file = (() => {
+    const date = new Date()
+    const filename = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}--${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}.log`
+    return fs.createWriteStream(path.join(`src/server/logs/${filename}`))
+})()
 
-app.use(ASSET_PATH, express.static(PROD_STATIC_PATH))
+const log_to_console = morgan('dev')
+const log_to_file = morgan('combined', { stream: log_file })
+
+app.use(log_to_console)
+app.use(log_to_file)
 
 app.get('*', (req, res, next) => {
-    console.log(req.url)
+    // do something on every request
     next()
 })
 
-const getFile = (filepath) => {
-    return new Promise((resolve, reject) => {
-        try {   
-            if (IS_PROD) {
-                return resolve(fs.readFileSync(filepath, 'utf-8'))
-            }
-            fetch(filepath)
-                .then((response) => response.text())
-                    .then((html_string) => resolve(html_string))
-
-        } catch (error) {
-            reject(error)
-        }
-    })    
-} 
-
-app.get('/', (req, res) => {
-    getFile(`${TEMPLATE_PATH}/home.html`)
-        .then((html_string) => {
-            res.statusCode = 200
-            res.setHeader('Content-Type', 'text/html')
-            res.end(html_string)
-        })
-})
+router(app)
 
 export default app

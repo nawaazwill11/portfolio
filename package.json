@@ -6,7 +6,7 @@
   "scripts": {
     "start": "babel src -d lib --extensions \".ts,.tsx\"",
     "dev:wds": "cross-env NODE_ENV=development WDS_PORT=7000 webpack serve",
-    "dev:server": "cross-env NODE_ENV=development nodemon --exec babel-node --config-file ./babel.node.config.json --extensions --ignore src/client .ts,.js src/server",
+    "dev:server": "cross-env NODE_ENV=development nodemon --exec babel-node --config-file ./babel.config.json --extensions .ts,.tsx,.js --ignore src/client src/server",
     "build": "rimraf build && babel --extensions .ts,.js ./src --ignore ./src/client -d ./build && cross-env NODE_ENV=production webpack --progress",
     "prod:start": "cross-env NODE_ENV=production nodemon  ./build/server",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -60,13 +60,20 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.5.0",
     "bootstrap": "^4.5.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "handlebars": "^4.7.6",
+    "immutable": "^4.0.0-rc.12",
     "jquery": "^3.5.1",
+    "morgan": "^1.10.0",
     "node-fetch": "^2.6.1",
     "nodemon": "^2.0.6",
     "pm2": "^4.5.0",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
   }
 }

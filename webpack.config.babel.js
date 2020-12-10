@@ -19,14 +19,14 @@ import {
 
 console.log(`WDS: Running in ${NODE_ENV} mode`)
 
-const pages_dir = './src/client/pages'
+const pages_dir = './src/client'
 const file_ext = ['.ts', '.tsx']
 
 const entry = (() => {
     return fs.readdirSync(pages_dir, 'utf-8').reduce((list, filename) => {
         const type_index = file_ext.indexOf(path.extname(filename))
         if (type_index === 0 || type_index) {
-            list[path.basename(filename, file_ext[type_index])] = path.resolve(`${pages_dir}/${filename}`)
+            list[path.basename(filename, file_ext[type_index])] = path.resolve(path.join(pages_dir, filename))
             return list
         }
     }, {})
