@@ -1,3 +1,0 @@
-::1 - - [08/Dec/2020:13:54:06 +0000] "GET / HTTP/1.1" 500 2891 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36"
-::1 - - [08/Dec/2020:13:54:26 +0000] "GET / HTTP/1.1" 500 2865 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36"
-::1 - - [08/Dec/2020:13:54:45 +0000] "GET / HTTP/1.1" 500 2921 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36"

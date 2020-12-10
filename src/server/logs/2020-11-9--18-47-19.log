@@ -1,2 +1,0 @@
-::1 - - [09/Dec/2020:13:17:29 +0000] "GET / HTTP/1.1" 302 64 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36"
-::1 - - [09/Dec/2020:13:17:29 +0000] "GET /portfolio HTTP/1.1" 500 1367 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36"
