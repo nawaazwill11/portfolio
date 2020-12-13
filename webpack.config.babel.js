@@ -4,17 +4,18 @@ import path from 'path'
 import fs from 'fs'
 
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
-import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import { HotModuleReplacementPlugin } from 'webpack'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 import {
     NODE_ENV,
     WDS_PORT,
     IS_PROD,
     DEV_SERVER_PUBLIC_PATH,
-    ASSET_PUBLIC_PATH
+    ASSET_PUBLIC_PATH,
+    STATIC_PUBLIC_PATH
 } from './src/shared/config'
 
 console.log(`WDS: Running in ${NODE_ENV} mode`)
@@ -56,7 +57,7 @@ const config = {
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
-        hot: true,
+        // hot: true,
         port: WDS_PORT,
         publicPath: DEV_SERVER_PUBLIC_PATH,
         headers: {
@@ -90,17 +91,22 @@ const config = {
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            publicPath: IS_PROD ? '/assets/' : `http://localhost:${WDS_PORT}/dist/`
+                            publicPath: STATIC_PUBLIC_PATH,
                         }
                     },
-                    'css-loader',
+                    {
+                        loader: require.resolve('css-loader'),
+                        options: {
+                            url: false,
+                        }
+                    },
                     'sass-loader',
                 ]
             },
-            {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: 'asset/resource',
-            }
+            // {
+            //     test: /\.(png|svg|jpg|jpeg|gif)$/i,
+            //     type: 'asset/resource',
+            // }
         ],
     },
     output: {

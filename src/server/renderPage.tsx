@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 import Handlebars from 'handlebars'
 import { Provider } from 'react-redux'
-import { renderToStaticMarkup, renderToString } from 'react-dom/server'
+import { renderToString } from 'react-dom/server'
 
 import initStore from '../shared/init-store'
 import { MetaData, ScriptMeta } from './types/renderPage'
