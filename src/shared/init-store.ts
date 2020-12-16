@@ -1,20 +1,19 @@
-import { applyMiddleware, createStore } from 'redux'
-import thunk from 'redux-thunk'
+import { configureStore } from '@reduxjs/toolkit'
 
 import { 
-    portfolioReducer
+    portfolioSlice
  } from './reducers'
 
  const reducer_index = {
-     portfolio: portfolioReducer,
+     portfolio: portfolioSlice,
  }
 
 const initStore = (reducer, preloadedState) => {
-
-    return createStore(
-        reducer_index[reducer],
+    console.log('creating store', preloadedState)
+    return configureStore({
+        reducer: reducer_index[reducer].reducer,
         preloadedState,
-        applyMiddleware(thunk)
-    )
+    })
 }
+
 export default initStore

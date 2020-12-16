@@ -1,1 +1,1 @@
-export { default as portfolioReducer } from './portfolio'
+export { default as portfolioSlice } from './portfolio'

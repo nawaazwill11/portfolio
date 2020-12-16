@@ -15,7 +15,8 @@ import {
     IS_PROD,
     DEV_SERVER_PUBLIC_PATH,
     ASSET_PUBLIC_PATH,
-    STATIC_PUBLIC_PATH
+    STATIC_PUBLIC_PATH,
+    PUBLIC_PATH
 } from './src/shared/config'
 
 console.log(`WDS: Running in ${NODE_ENV} mode`)
@@ -112,7 +113,8 @@ const config = {
     output: {
         filename: 'js/[name].bundle.js',
         path: path.resolve(__dirname, 'build/assets'),
-        publicPath: ASSET_PUBLIC_PATH
+        publicPath: ASSET_PUBLIC_PATH,
+        crossOriginLoading: 'anonymous',
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],

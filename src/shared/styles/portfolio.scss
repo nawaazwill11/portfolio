@@ -10,6 +10,7 @@ p {
 
     &.lead {
         text-align: center;
+        font-style: italic;
     }
 
     strong {
@@ -45,6 +46,32 @@ ol {
 .bullet-less {
     list-style: none;
 }
+#navbar {
+    position: fixed;
+    top: 60px;
+    right: 60px;
+    width: auto;
+    height: auto;
+    padding: 0;
+    z-index: 4;
+
+    .navbar-nav {
+        flex-direction: column;
+        padding: 0;
+    }
+    .nav-item {
+        padding: 1rem;
+        text-align: center;
+
+        &.active {
+            background-color: $primary-color;   
+        }
+    }
+    .nav-link {
+        color: white;
+        font-weight: 500;
+    }
+}
 
 #introduction {
     position: relative;
@@ -55,6 +82,7 @@ ol {
     align-items: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 
     * {
         color: $white !important;
@@ -71,6 +99,7 @@ ol {
     .lead {
         font-size: 2rem;
         font-weight: 200;
+        font-style: normal;
     }
     .overlay {
         position: absolute;
@@ -89,23 +118,29 @@ ol {
         width: 100%;
         max-width: 250px;
         border-radius: 100%;
-        border: 5px solid $secondary-color;
+        border: 10px solid $secondary-color;
     }
     .social {
-        display: flex;
-        gap: 0.5rem;
+        margin-top: 1.5rem;
     }
     .social-button {
         height: 15px;
     }
 }
 
-#experience {
+#experiences {
+    .row {
+        margin-top: 1rem;
+    }
+
     h3 {
         margin-bottom: 1rem;
     }
     h4 {
         margin-bottom: 1rem;
+        a {
+            color: inherit;
+        }
     }
 }
 
@@ -123,18 +158,30 @@ ol {
             width: 40%;
             display: flex;
             gap: 3px;
+            justify-content: flex-end;
         }
     }
 }
 
 #projects {
-    
+    .row > div {
+        margin-bottom: 1rem;
+    }
     .project {
         position: relative;
         overflow: hidden;
         margin: 15px;
+        box-shadow: 0px 0px 10px 0px #331b1b85;
+
+        &:hover {
+            transition: transform 0.2s ease-in-out;
+            transform: scale(1.05);
+        }
+        p {
+            font-size: 0.8rem !important;
+        }
     }
-    
+
     .project-image {
         width: 100%;
         height: auto;
@@ -142,22 +189,35 @@ ol {
     .project-overview {
         position: absolute;
         width: 100%;
-        padding: 0.5rem 1rem;
-        background-color: #e339398a;
+        padding: 1rem;
+        background-color: #e33939bf;
         top: 500px;
         line-height: 2;
         height: 100%;
         transition: top 0.3s ease-in-out;
+        overflow-y: auto;
 
         * {
             color: $white !important;
         }
 
-        h3 {
+        h4 {
             font-weight: 500;
-            border-bottom: 1px solid $white;
-            line-height: 2;
-            margin-bottom: 1rem;
+            border-bottom: 1px solid #ffffff73;
+            padding-bottom: 0.2rem;
+            margin-bottom: 0.5rem;
+            width: fit-content;
+        }
+
+        p {
+            margin: 0;
+
+            span {
+                display: block;
+                margin-bottom: 0.3rem;
+                border-bottom: 1px solid #ffffff73;
+            }
+            // line-height: 2.5;
         }
 
         a {
@@ -170,6 +230,51 @@ ol {
                 width: 100%;
             }
         }
+        .info {
+            hr {
+                margin: 0.1rem 0;
+                border-color: #ffffff73;
+            }
+        }
+    }
+}
+
+#contact {
+    position: relative;
+    min-height: 85vh;
+    height: auto;
+    background-color: #331b1b;
+
+    * {
+        color: white !important;
+    }
+
+    hr {
+        border-top: 1px solid #ffffff54;
+    }
+
+    .handler-row > div {
+        text-align: center;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+    }
+    .handler-row {
+        img {
+            width: 50px;
+            border: 1px solid white;
+            padding: 10px;
+        }
+    }
+    .reference-attribute {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        bottom: 60px;
+        font-size: 0.85rem;
     }
 }
 
@@ -184,6 +289,12 @@ ol {
             flex-direction: column;
             gap: 1rem;
         }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .profile-row {
+        text-align: center;
     }
 }
 

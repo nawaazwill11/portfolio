@@ -5,8 +5,6 @@ const App = ({ a }) => {
 }
 
 const mapStateToProps = (store) => {
-    console.log(store)
-
     return {
         a: store.a
     }

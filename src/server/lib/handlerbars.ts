@@ -16,7 +16,6 @@ export function attachCustomHelpers(Handlebars) {
     })
 
     Handlebars.registerHelper('script_with_content', function (item) {
-        console.log(item)
         return `<script ${attributes(item.attr)}>${item.content}</script>`
     })
 }
