@@ -47,13 +47,18 @@ ol {
     list-style: none;
 }
 #navbar {
-    position: fixed;
-    top: 60px;
+    position: absolute;
+    top: 100%;
     right: 60px;
     width: auto;
     height: auto;
     padding: 0;
     z-index: 4;
+
+    &.fixed {
+        position: fixed;
+        top: 60px;
+    }
 
     .navbar-nav {
         flex-direction: column;
