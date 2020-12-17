@@ -10,7 +10,14 @@ const app = express()
 const log_file = (() => {
     const date = new Date()
     const filename = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}--${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}.log`
-    return fs.createWriteStream(path.join(`src/server/logs/${filename}`))
+    const filepath = path.resolve('./logs')
+    console.log(filepath)
+    if (!fs.readdirSync('.', 'utf-8').includes('logs')) {
+        console.log('creating logs dir')
+        fs.mkdirSync(filepath)
+    }
+
+    return fs.createWriteStream(path.join(filepath, filename))
 })()
 
 const log_to_console = morgan('dev')
