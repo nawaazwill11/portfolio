@@ -355,7 +355,7 @@ const Page = ({
 
     return (
         <>
-            <Navbar setActiveNav={setActiveNav} />
+            <Navbar />
             <Introduction data={state.data.introduction} />
             <Profile data={state.data.profile} />
             <Experiences data={state.data.experiences} />
