@@ -42,7 +42,7 @@ const Navbar = ({ setActiveNav }) => {
                                 links_ref[i] = useRef()
                                 return (
                                     <li key={Math.random()} ref={links_ref[i]} className={`nav-item ${i === 0 ? 'active' : ''}`}>
-                                        <a href={link.href} className="nav-link">{link.name}</a>
+                                        <a href={link.href} className="nav-link" data-toggle="collapse" data-target="#nav-list">{link.name}</a>
                                     </li>
                                 )
                             })
@@ -383,7 +383,7 @@ const Contact = ({ data }) => {
 const Page = ({
     state,
     setActiveNav }: TPageProps) => {
-        
+
     return (
         <>
             <Navbar setActiveNav={setActiveNav} />

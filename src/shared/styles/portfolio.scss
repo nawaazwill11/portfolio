@@ -47,17 +47,21 @@ ol {
     list-style: none;
 }
 #navbar {
+    display: flex;
+    justify-content: flex-end;
     position: absolute;
     top: 100%;
-    right: 60px;
-    width: auto;
+    right: 0;
     height: auto;
     padding: 0;
+    // transition: top 0.3s ease-in-out;
     z-index: 4;
 
     &.fixed {
         position: fixed;
-        top: 60px;
+        top: 0;
+        left: unset;
+        width: fit-content;
     }
 
     .navbar-nav {
@@ -136,12 +140,14 @@ ol {
 #experiences {
     .row {
         margin-top: 1rem;
+        margin-bottom: 2rem;
     }
 
     h3 {
         margin-bottom: 1rem;
     }
     h4 {
+        font-weight: bold;
         margin-bottom: 1rem;
         a {
             color: inherit;
@@ -313,4 +319,16 @@ ol {
 }
 
 @media screen and (min-width: 992px) {
+    #navbar {
+        left: unset;
+        top: 100%;
+        right: 60px;
+        width: auto;
+
+        &.fixed {
+            position: fixed;
+            top: 60px;
+            right: 60px;
+        }
+    }
 }
