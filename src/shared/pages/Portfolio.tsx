@@ -30,25 +30,27 @@ const Navbar = ({ setActiveNav }) => {
     const links_ref = []
 
     return (
-        <nav id="navbar" className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-list">
-                <span className="navbar-toggler-icon" />
-            </button>
-            <div className="collapse navbar-collapse" id="nav-list">
-                <ul className="navbar-nav">
-                    {
-                        links.map((link, i) => {
-                            links_ref[i] = useRef()
-                            return (
-                                <li key={Math.random()} ref={links_ref[i]} className={`nav-item ${i === 0 ? 'active' : ''}`}>
-                                    <a href={link.href} className="nav-link">{link.name}</a>
-                                </li>
-                            )
-                        })
-                    }
-                </ul>
-            </div>
-        </nav>
+        <>
+            <nav id="navbar" className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-list">
+                    <span className="navbar-toggler-icon" />
+                </button>
+                <div className="collapse navbar-collapse" id="nav-list">
+                    <ul className="navbar-nav">
+                        {
+                            links.map((link, i) => {
+                                links_ref[i] = useRef()
+                                return (
+                                    <li key={Math.random()} ref={links_ref[i]} className={`nav-item ${i === 0 ? 'active' : ''}`}>
+                                        <a href={link.href} className="nav-link">{link.name}</a>
+                                    </li>
+                                )
+                            })
+                        }
+                    </ul>
+                </div>
+            </nav>
+        </>
         // <nav class="navbar navbar-expand-lg navbar-light bg-light">
         //     <div class="container-fluid">
         //         <a class="navbar-brand" href="#">Navbar</a>
@@ -380,22 +382,8 @@ const Contact = ({ data }) => {
 
 const Page = ({
     state,
-    setSectionsOffsets,
-    addWindowEvents,
     setActiveNav }: TPageProps) => {
-
-    const getActiveNav = () => state.active_nav
-
-    useEffect(() => {
-        // if (!state.initialized) {
-        //     setSectionsOffsets()
-        // } else {
-        //     addWindowEvents(state.section_offsets, getActiveNav)
-        // }
-
-        return () => window.onscroll = () => { }
-    }, [state.initialized])
-
+        
     return (
         <>
             <Navbar setActiveNav={setActiveNav} />
@@ -410,18 +398,10 @@ const Page = ({
 }
 
 const mapStateToProps = (state: TAppState) => {
-    console.log(state)
     return {
         state: state,
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        setSectionsOffsets: () => dispatch(setSectionsOffsets()),
-        addWindowEvents: (offsets, setActiveNav) => dispatch(addWindowEvents(offsets, setActiveNav))
-        // setActiveNav: (link) => dispatch(portfolioSlice.actions[SET_ACTIVE_NAV](link)),
-    }
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(Page)
+export default connect(mapStateToProps)(Page)

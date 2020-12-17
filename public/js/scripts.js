@@ -48,7 +48,6 @@ window.onload = () => {
     let previous_time = 0
     const throttle = 50
     const nav = document.getElementById('navbar')
-    console.log(nav)
 
     function scrollSpyNav() {
         const current = this.scrollY
@@ -71,22 +70,18 @@ window.onload = () => {
                 if (current >= node.range.low && current <= node.range.high && active_nav !== node.name) {
                     active_nav = node.name
                     current_node = node
-                    console.log(active_nav)
                     navStyling(active_nav)
                 }
 
                 if (current >= window.innerHeight) {
-                    console.log('more')
                     if (!nav.classList.contains('fixed')) {
                         nav.classList.add('fixed')
                     }
                 } else {
-                    console.log('less')
                     if (nav.classList.contains('fixed')) {
                         nav.classList.remove('fixed')
                     }
                 }
-                console.log(nav.style.position)
             })
             // window.scroll({
             //     top: node.range.low + 5,

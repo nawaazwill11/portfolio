@@ -18,7 +18,7 @@ const portfolioSlice = createSlice({
     reducers: {
         [SET_INITIALIZED]: (state, action: PayloadAction<any>) => ({ ...state, initialized: action.payload }),
         [SET_ACTIVE_NAV]: (state, action: PayloadAction<any>) => ({ ...state, active_nav: action.payload }),
-        [SET_SECTIONS_OFFSETS]: (state, action: PayloadAction<any>) => { console.log('in reducer', state); return ({ ...state, section_offsets: action.payload }) }
+        [SET_SECTIONS_OFFSETS]: (state, action: PayloadAction<any>) => ({ ...state, section_offsets: action.payload }) 
     }
 })
 
@@ -50,8 +50,7 @@ export const windowScroll = (offsets, getActiveNav) => (dispatch) => {
     const currentOffsetY = window.scrollY
     const action = actions[SET_ACTIVE_NAV]
 
-    const active_nav = getActiveNav
-    console.log(active_nav)
+    const active_nav = getActiveNav()
 
     if (currentOffsetY >= profile && currentOffsetY < experiences) {
         if (active_nav !== 'Profile') dispatch(action('Profile'))
@@ -68,7 +67,6 @@ export const windowScroll = (offsets, getActiveNav) => (dispatch) => {
 
 
 export const addWindowEvents = (offsets, getActiveNav) => (dispatch) => {
-    console.log('addwindowevnts')
     window.addEventListener('scroll', () => {
         dispatch(windowScroll(offsets, getActiveNav))
     })

@@ -9,7 +9,7 @@ import {
  }
 
 const initStore = (reducer, preloadedState) => {
-    console.log('creating store', preloadedState)
+    // console.log('creating store', preloadedState)
     return configureStore({
         reducer: reducer_index[reducer].reducer,
         preloadedState,
