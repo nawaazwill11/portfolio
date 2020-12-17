@@ -20,7 +20,7 @@ export default {
             },
             {
                 property: "og:description",
-                content: "An Interactive Porfolio Page To Portay Nawaaz Kortiwala's Skillset, Experience, and Work",
+                content: "An interactive porfolio page to portay Nawaaz Kortiwala's skillset, experience, and work.",
             },
             {
                 property: "og:image",
