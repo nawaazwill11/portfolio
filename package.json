@@ -6,6 +6,7 @@
   "scripts": {
     "start": "babel src -d lib --extensions \".ts,.tsx\"",
     "dev:wds": "cross-env NODE_ENV=development WDS_PORT=7000 webpack serve",
+    "dev:run-all": "concurrently \"yarn dev:server\" \"yarn dev:wds\" ",
     "dev:server": "cross-env NODE_ENV=development nodemon --exec babel-node --config-file ./babel.config.json --extensions .ts,.tsx,.js src/server",
     "build": "rimraf build && babel --extensions .ts,.tsx,.js ./src --ignore ./src/client -d ./build && cross-env NODE_ENV=production webpack --progress",
     "prod:start": "cross-env NODE_ENV=production pm2 start build/server && pm2 logs",
@@ -64,6 +65,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.0",
     "bootstrap": "^4.5.3",
+    "concurrently": "^5.3.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "handlebars": "^4.7.6",
