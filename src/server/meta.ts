@@ -12,7 +12,7 @@ export default {
             },
             {
                 property: "og:url",
-                content: '',
+                content: 'https://nawaaz.dev/portfolio',
             },
             {
                 property: "og:title",
@@ -24,11 +24,11 @@ export default {
             },
             {
                 property: "og:image",
-                content: '',
+                content: 'https://nawaaz.dev/static/img/me3.jpg',
             },
             {
                 property: "og:image:type",
-                content: '',
+                content: 'image/jpeg',
             },
             {
                 property: "og:type",
