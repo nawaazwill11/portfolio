@@ -288,7 +288,7 @@ ol {
         position: absolute;
         width: 100%;
         text-align: center;
-        bottom: 60px;
+        bottom: 30px;
         font-size: 0.85rem;
     }
 }
@@ -334,5 +334,8 @@ ol {
             top: 60px;
             right: 60px;
         }
+    }
+    .reference-attribute {
+        bottom: 60px;
     }
 }
