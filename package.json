@@ -11,6 +11,7 @@
     "build": "rimraf build && babel --extensions .ts,.tsx,.js ./src --ignore ./src/client -d ./build && cross-env NODE_ENV=production webpack --progress",
     "prod:start": "cross-env NODE_ENV=production pm2 start build/server && pm2 logs",
     "prod:stop": "pm2 delete server",
+    "prod:restart": "yarn prod:stop a&& yarn prod:start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
