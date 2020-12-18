@@ -55,9 +55,24 @@ function scrollSpyNav(elements, active_nav, nav) {
 }
 
 
+function navbarMobile(nav, profile_section) {
+    const style = document.createElement('style')
+    style.type = 'text/css'
+    document.head.appendChild(style)
+
+    if (window.innerWidth < 992) {
+        style.appendChild(document.createTextNode(`
+        #navbar {
+            top: ${profile_section.range.low}px
+        }
+        `))
+    }
+}
+
+
 function navCollapseFix() {
     document.querySelectorAll('.nav-link').forEach((nav_link) => {
-        nav_link.addEventListener('click', function() {
+        nav_link.addEventListener('click', function () {
             document.querySelector('.navbar-toggler').click()
         })
     })
@@ -91,8 +106,9 @@ window.onload = () => {
     const state = initial_state()
 
     createElementRanges(state.elements)
+    navbarMobile(state.nav, state.elements.find((element) => element.name === 'profile'))
     navCollapseFix()
 
-    window.addEventListener('scroll', () => scrollSpyNav(state.elements, state.active_nav, state.nav))
-    window.addEventListener('resize', () => createElementRanges(state.elements))
+    window.addEventListener('scroll', () => { scrollSpyNav(state.elements, state.active_nav, state.nav); })
+    window.addEventListener('resize', () => { createElementRanges(state.elements); })
 }

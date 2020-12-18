@@ -104,6 +104,10 @@ ol {
     h1 {
         display: inline-block;
         border-bottom: 1px solid #ffffff78;
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+        font-size: 3.5rem;
+
     }
     .lead {
         font-size: 2rem;
@@ -292,7 +296,7 @@ ol {
 @media screen and (max-width: 767px) {
     #introduction {
         h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
         }
     }
     #profile {
