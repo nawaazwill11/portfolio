@@ -24,7 +24,7 @@ export default {
             },
             {
                 property: "og:image",
-                content: 'https://nawaaz.dev/static/img/me3.jpg',
+                content: 'https://nawaaz.dev/static/img/me.jpg',
             },
             {
                 property: "og:image:type",
