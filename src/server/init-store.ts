@@ -9,12 +9,6 @@ import { portfolioSlice } from '../shared/reducers'
  }
 
 const initStore = (reducer, preloadedState) => {
-
-    // return createStore(
-    //     reducer_index[reducer],
-    //     preloadedState,
-    //     applyMiddleware(thunk)
-    // )
     return configureStore({
         reducer: reducer_index[reducer],
         preloadedState

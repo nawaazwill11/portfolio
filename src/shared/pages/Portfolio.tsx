@@ -101,7 +101,7 @@ const Profile = ({ data }: { data: TSectionProfile }) => {
                     <div className="row profile-row">
                         <div className="col-lg-4">
                             <h3>About me</h3>
-                            <p>{data.about_me}</p>
+                            <p className="about-me">{data.about_me}</p>
                         </div>
                         <div className="col-lg-4 text-center py-4">
                             <img className="author-img" src={`/static/img/${data.img}`} alt={data.details.name} />
@@ -224,21 +224,26 @@ const Abilities = ({ data }: { data: TSectionAbilities }) => {
                 <p className="lead">{data.header.lead}</p>
                 <hr />
                 <div className="content">
-                    <h3>Software Skills</h3>
-                    <div className="row">
-                        {skillFactory(data.software, Math.ceil(data.software.length / 2))}
+                    <div className="ability">
+                        <h3>Software Skills</h3>
+                        <div className="row">
+                            {skillFactory(data.software, Math.ceil(data.software.length / 2))}
+                        </div>
                     </div>
                     <hr />
-                    <h3>Development Tools</h3>
-                    <div className="row">
-                        {skillFactory(data.tools, Math.ceil(data.tools.length / 2))}
+                    <div className="ability">
+                        <h3>Development Tools</h3>
+                        <div className="row">
+                            {skillFactory(data.tools, Math.ceil(data.tools.length / 2))}
+                        </div>
                     </div>
                     <hr />
-                    <h3>Verbal Language</h3>
-                    <div className="row">
-                        {skillFactory(data.languages, Math.ceil(data.languages.length / 2))}
+                    <div className="ability">
+                        <h3>Verbal Language</h3>
+                        <div className="row">
+                            {skillFactory(data.languages, Math.ceil(data.languages.length / 2))}
+                        </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -278,7 +283,7 @@ const Projects = ({ data }: { data: TSectionProjects }) => {
                 <div className="project">
                     <img className="project-image" src={`/static/img/project/${project.img}`} alt={project.name} />
                     <div className="project-overview">
-                        <h4>{project.name}</h4>
+                        <h4>{project.name}</h4>                        
                         <p className="info">
                             <span>{project.description}</span>
                             <span>{project.tags.join(', ')}</span>
@@ -287,6 +292,7 @@ const Projects = ({ data }: { data: TSectionProjects }) => {
                         <a className="btn btn-primary" href={project.href} target="_blank" rel="noreferer noopener">
                             <img src="/static/img/svg/open.svg" alt="" />
                         </a>
+                        <a className="hidden-link" href={project.href}>View</a>
                     </div>
                 </div>
             </div>
@@ -336,7 +342,7 @@ const Contact = ({ data }: { data: TSectionContact }) => {
                         </div>
                     </div>
                     <hr />
-                    <div className="text-center">
+                    <div className="hire-me">
                         <h3>Want to hire me?</h3>
                         <h4>Contact me on: <a href="tel:+919737177329">+91 97371 77329</a></h4>
                     </div>
@@ -345,6 +351,9 @@ const Contact = ({ data }: { data: TSectionContact }) => {
             <div className="reference-attribute">
                 Inspired by <a href="http://www.pascalvangemert.nl/" target="_blank" rel="noreferer noopener">Pascal Van Gemert</a>
             </div>
+            <div className="portfolio-redirect">
+                <a href="https://nawaaz.dev/portfolio">Check out my Interactive Portofolio for more</a>
+            </div>
         </footer>
     )
 }
@@ -352,6 +361,10 @@ const Contact = ({ data }: { data: TSectionContact }) => {
 const Page = ({
     state,
     setActiveNav }: TPageProps) => {
+
+    useEffect(() => {
+        window.print()
+    })
 
     return (
         <>

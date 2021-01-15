@@ -12,7 +12,7 @@ import { ASSET_PUBLIC_PATH } from '../shared/config'
 
 const renderPage = (id: string, state: object, meta_data: MetaData, App): String => {
     // Load the store with initial and preloaded values values
-    const store = initStore(id, state || {})
+    const store = initStore(id, state || {})    
     // Wrap the app
     const app_html = renderToString(
         <Provider store={store} >
