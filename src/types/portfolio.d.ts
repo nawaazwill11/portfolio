@@ -49,11 +49,25 @@ export type TRank = {
     rank: number
 }
 
+export type TAbilitiesSection = {
+    name: string,
+    nodes: Array<TRank>
+}
+
 export type TSectionAbilities = {
     header: TSectionHeader,
-    software: Array<TRank>,
-    tools: Array<TRank>,
-    languages: Array<TRank>,
+    sections: Array<TAbilitiesSection>
+}
+
+export type TAchievementsPoint = {
+    name: string,
+    date: string,
+    attachments: Array<string>
+}
+
+export type TSectionAchievements = {
+    header: TSectionHeader,
+    points: Array<TAchievementsPoint>
 }
 
 export type TProject = {
@@ -95,6 +109,7 @@ export type TAppState = {
         profile: TSectionProfile,
         experiences: TSectionExperience,
         abilities: TSectionAbilities,
+        achievements: TSectionAchievements,
         projects: TSectionProjects,
         contact: TSectionContact,
     }

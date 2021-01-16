@@ -14,7 +14,7 @@ function portfolioPage(req, res) {
     try {
         if ((fs.readdirSync(file_location, 'utf-8')).includes(file_name)) {
             data = JSON.parse(fs.readFileSync(path.join(file_location, file_name), 'utf-8'))
-            // console.log(data)
+            console.log(data)
         }
     } catch (error) {
         res.status(500)

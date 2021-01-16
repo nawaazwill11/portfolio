@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import { connect } from 'react-redux'
-import { TAppState, TPageProps, TSectionAbilities, TSectionContact, TSectionExperience, TSectionIntroduction, TSectionProfile, TSectionProjects } from "../../types/portfolio"
+import { TAbilitiesSection, TAppState, TPageProps, TRank, TSectionAbilities, TSectionContact, TSectionExperience, TSectionIntroduction, TSectionProfile, TSectionProjects, TSectionAchievements, TAchievementsPoint } from "../../types/portfolio"
 import { addWindowEvents, setSectionsOffsets } from '../reducers/portfolio'
 
 const Navbar = () => {
@@ -55,14 +55,12 @@ const Navbar = () => {
 }
 
 const Introduction = ({ data }: { data: TSectionIntroduction }) => {
-    const background = () => {
-        return data.background[Math.floor(Math.random() * 3)]
-    }
+    const background = data.background[Math.floor(Math.random() * data.background.length)]
     return (
-        <section id="introduction" style={{ backgroundImage: `url('/static/img/${background()}')` }}>
+        <section id="introduction" style={{ backgroundImage: `url('/static/img/background/${background}')` }}>
             <div className="container text-center">
                 <h1 className="display-3 section-header">{data.header.large}</h1>
-                <p className="lead">{data.header.lead}</p>
+                {/* <p className="lead">{data.header.lead}</p> */}
             </div>
             <div className="overlay" />
         </section>
@@ -95,7 +93,7 @@ const Profile = ({ data }: { data: TSectionProfile }) => {
         <section id="profile">
             <div className="container">
                 <h2 className="section-header">Profile</h2>
-                <p className="lead">{data.header.lead}</p>
+                {/* <p className="lead">{data.header.lead}</p> */}
                 <hr />
                 <div className="content">
                     <div className="row profile-row">
@@ -140,12 +138,24 @@ const Experiences = ({ data }: { data: TSectionExperience }) => {
                 <div key={Math.random()} className="row">
                     <div className="col-lg-4">
                         <h4>
-                            <a href={xp.premise.href}>
+                            <a href={xp.premise.href} target="_blank" rel="noreferer noopener">
                                 {xp.premise.name}
                             </a>
                         </h4>
-                        {/* <span className="d-block">{xp.premise.sub}</span> */}
                         <p>{xp.duration}</p>
+
+                        {
+                            xp.premise.location
+                                ?
+                                (
+                                    <p className="location">
+                                        <img src="/static/img/svg/location.svg" alt="" />
+                                        {xp.premise.location}
+                                    </p>
+
+                                )
+                                : ''
+                        }
                     </div>
                     <div className="col-lg-8">
                         <p>
@@ -156,7 +166,7 @@ const Experiences = ({ data }: { data: TSectionExperience }) => {
                             xp.roles ?
                                 (
                                     <p>
-                                        <b>Roles:</b> {xp.roles.join(', ')}
+                                        <b>Roles:</b> {xp.roles ? xp.roles.join(', ') : ''}
                                     </p>
                                 ) : ''
                         }
@@ -170,7 +180,7 @@ const Experiences = ({ data }: { data: TSectionExperience }) => {
         <section id="experiences" className="body-colored">
             <div className="container">
                 <h2 className="section-header">Experiences</h2>
-                <p className="lead">{data.header.lead}</p>
+                {/* <p className="lead">{data.header.lead}</p> */}
                 <hr />
                 <div className="content">
                     <h3>Educations</h3>
@@ -196,53 +206,92 @@ const Abilities = ({ data }: { data: TSectionAbilities }) => {
 
     // console.log(data)
 
-    const skillFactory = (skills, half) => (
-        [skills.slice(0, half), skills.slice(half,)].map((part_skills) => {
+    const skillNodes = (skills: Array<TRank>) => {
+        const half = Math.ceil(skills.length / 2)
+        // sort skills in descending order
+        skills.sort((a, b) => Number(b.rank) - Number(a.rank))
+
+        return [skills.slice(0, half), skills.slice(half,)].map((part_skills) => (
+            <div key={Math.random()} className="col-lg-6">
+                <ul className="bullet-less">
+                    {part_skills.map((skill) => (
+                        <li key={Math.random()}>
+                            <span className="skill">{skill.name}</span>
+                            <span className="rank">
+                                {new Array(5).fill(skill.rank).map((v, i) => {
+                                    return <img key={Math.random()} src={`/static/img/svg/star${i < v ? '-fill' : ''}.svg`} alt="" />
+                                })}
+                            </span>
+                        </li>))}
+                </ul>
+            </div>
+        ))
+    }
+
+    const skillFactory = (sections: Array<TAbilitiesSection>) => (
+        sections.map((section, i) => {
+            let section_name = section.name
             return (
-                <div key={Math.random()} className="col-lg-6">
-                    <ul className="bullet-less">
-                        {part_skills.map((skill) => (
-                            <li key={Math.random()}>
-                                <span className="skill">{skill.name}</span>
-                                <span className="rank">
-                                    {new Array(5).fill(skill.rank).map((v, i) => {
-                                        return <img key={Math.random()} src={`/static/img/svg/star${i < v ? '-fill' : ''}.svg`} alt="" />
-                                    })}
-                                </span>
-                            </li>))}
-                    </ul>
-                </div>
+                <>
+                    <div key={Math.random()} className="ability" >
+                        <h3>{section_name}</h3>
+                        <div className="row">
+                            {skillNodes(section.nodes)}
+                        </div>
+                    </div>
+                    {i < sections.length - 1 ? <hr /> : ''}
+                </>
             )
         })
     )
-
 
     return (
         <section id="abilities">
             <div className="container">
                 <h2 className="section-header">Abilities</h2>
-                <p className="lead">{data.header.lead}</p>
+                {/* <p className="lead">{data.header.lead}</p> */}
                 <hr />
                 <div className="content">
-                    <div className="ability">
-                        <h3>Software Skills</h3>
-                        <div className="row">
-                            {skillFactory(data.software, Math.ceil(data.software.length / 2))}
-                        </div>
-                    </div>
-                    <hr />
-                    <div className="ability">
-                        <h3>Development Tools</h3>
-                        <div className="row">
-                            {skillFactory(data.tools, Math.ceil(data.tools.length / 2))}
-                        </div>
-                    </div>
-                    <hr />
-                    <div className="ability">
-                        <h3>Verbal Language</h3>
-                        <div className="row">
-                            {skillFactory(data.languages, Math.ceil(data.languages.length / 2))}
-                        </div>
+                    {skillFactory(data.sections)}
+                </div>
+            </div>
+        </section>
+    )
+}
+
+const Achievements = ({ data }: { data: TSectionAchievements }) => {
+    return (
+        <section id="achievements">
+            <div className="container">
+                <h2 className="section-header">Achievements</h2>
+                {/* <p className="lead">{data.header.lead}</p> */}
+                <hr />
+                <div className="content">
+                    <div className="row">
+                        <ul className="achievement-list">
+                            {
+                                data.points.map((point: TAchievementsPoint) => (
+                                    <li>
+                                        <div className="point">
+                                            <span><strong>{point.name}</strong></span>
+                                        </div>
+                                        <div className="date">
+                                            <span>{point.date}</span>
+                                            {/* <span><strong>Date: </strong></span> */}
+                                        </div>
+                                        <div className="attachments">
+                                            {/* <span><strong>Attachments: </strong></span> */}
+                                            {
+                                                point.attachments.map((attachment: string, i: number) => (
+                                                    <a key={Math.random()} className="attachment-link" href={attachment} target="_blank" rel="noreferer noopener">{i + 1}</a>
+                                                ))
+                                            }
+                                        </div>
+                                        <div className="border"></div>
+                                    </li>
+                                ))
+                            }
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -283,7 +332,7 @@ const Projects = ({ data }: { data: TSectionProjects }) => {
                 <div className="project">
                     <img className="project-image" src={`/static/img/project/${project.img}`} alt={project.name} />
                     <div className="project-overview">
-                        <h4>{project.name}</h4>                        
+                        <h4>{project.name}</h4>
                         <p className="info">
                             <span>{project.description}</span>
                             <span>{project.tags.join(', ')}</span>
@@ -303,7 +352,7 @@ const Projects = ({ data }: { data: TSectionProjects }) => {
         <section id="projects" className="body-colored">
             <div className="container">
                 <h2 className="section-header">Projects</h2>
-                <p className="lead">{data.header.lead}</p>
+                {/* <p className="lead">{data.header.lead}</p> */}
                 <hr />
                 <div className="content">
                     <div className="row">
@@ -320,7 +369,7 @@ const Contact = ({ data }: { data: TSectionContact }) => {
         <footer id="contact">
             <div className="container">
                 <h2 className="section-header">Contact</h2>
-                <p className="lead">{data.header.lead}</p>
+                {/* <p className="lead">{data.header.lead}</p> */}
                 <hr />
                 <div className="content">
                     <div className="row handler-row">
@@ -362,10 +411,7 @@ const Page = ({
     state,
     setActiveNav }: TPageProps) => {
 
-    useEffect(() => {
-        window.print()
-    })
-
+    console.log(state.data.achievements)
     return (
         <>
             <Navbar />
@@ -373,6 +419,7 @@ const Page = ({
             <Profile data={state.data.profile} />
             <Experiences data={state.data.experiences} />
             <Abilities data={state.data.abilities} />
+            <Achievements data={state.data.achievements} />
             <Projects data={state.data.projects} />
             <Contact data={state.data.contact} />
         </>

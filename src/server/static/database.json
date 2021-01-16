@@ -1,31 +1,30 @@
 {
     "introduction": {
         "header": {
-            "large": "Nawaaz Kortiwala",
+            "large": "Bhawhuddin Hamdulay",
             "lead": "Interactive Resume"
         },
         "background": [
-            "super-duke.jpg",
-            "super-duke2.jpg",
-            "super-duke3.jpg"
+            "bg-1.jpg",
+            "bg-2.jpg"
         ]
     },
     "profile": {
         "header": {
             "lead": "I'm a proficient JavaScript developer"
         },
-        "about_me": "I'm a full-stack developer with a love for JavaScript. I focus on creating web applications that are simplistic and elegant in design. I'm good at finding and fixing problems, and I give extra attention to details. I've an immense interest in learning and trying out new things. I'm comfortable working with people as well as in a solo-mode. I'm output-oriented and I don't stop until I've delivered.",
+        "about_me": "Expert professional in Sales & Business development, planning and executing business strategies, master in developing new market channels and building strong relationships with cross functional team, customers, and industry leaders. Rich experience in managing the entire gamut of activities related to Key Account Management, P & L, Operations, Sales & Distribution, RTM, Budget & Forecasting, Product launch and product promotion through direct sales and strategic alliances with domestic and international business partners.",
         "img": "me.jpg",
         "details": {
-            "name": "Nawaaz Kortiwala",
-            "age": "1993-11-24",
+            "name": "Bhawhuddin Hamdulay",
+            "age": "1977-09-08",
             "location": "Daman, Daman & Diu (U.T.), India",
             "hobbies": [
-                "Coding",
-                "Reading",
-                "Photography",
                 "Sports",
-                "Traveling"
+                "Writing",
+                "Travel",
+                "Learning languages",
+                "Photography"
             ]
         }
     },
@@ -36,95 +35,115 @@
         "educations": [
             {
                 "premise": {
-                    "name": "Sinhgad Institutes",
-                    "sub": "Savitribai Phule (Pune) University",
-                    "href": "http://www.sinhgad.edu/"
+                    "name": "SIBER Institute",
+                    "sub": "Shivaji University",
+                    "href": "http://www.siberindia.edu.in/",
+                    "location": "Kohlapur, India"
                 },
                 "duration": "May 2015 - April 2018",
-                "title": "Degree - Master of Computer Application",
-                "description": "The course was based on a broad curriculum consisting of data structures and algorithms, optimization techniques, probability and combinatorics, object oriented analysis and design, advanced web technologies, and software development to name a few. The course’s concurrent evaluation (CE) consisted of case studies, field visits and study tours, group discussion, industry analysis, and model development / simulation exercises, and live projects.",
-                "location": "Pune"
+                "title": "Degree - Master of Business Administration",
+                "description": "The MBA in marketing prepares you for more than careers in marketing. Some of the career options will include consulting, entrepreneurial careers, and general management. The marketing MBA teaches skills you use in any field. You learn skills such as mathematics, communications, analytical, and, of course, management."
             },
             {
                 "premise": {
-                    "name": "SSR ACS",
-                    "href": "https://ssracs.edu.in/"
+                    "name": " College of Agriculture ",
+                    "sub": "Mahatma Phule Krishi Vidyapeeth",
+                    "href": "https://www.ackolhapur.edu.in/",
+                    "location": "Kohlapur, India"
                 },
-                "duration": "May 2012 - April 2015",
-                "title": "Degree - Bachelor of Computer Application",
-                "description": "The graduation course consisted of both technical and business aspects. The curriculum consisted of business subjects such as marketing, management, and accounting. IN the technical dimension, the course taught computer fundamentals, file structure and database concepts, problem solving and algorithms, networking, software engineering concepts, cyber security, and internet programming.",
-                "location": "Silvassa"
-            },
-            {
-                "premise": {
-                    "name": "Mahatma Gandhi Vidhyalaya",
-                    "href": "https://goo.gl/maps/Twbrg8s5LMjyft3e8"
-                },
-                "duration": "May 2010 - April 2012",
-                "title": "High School - PCM",
-                "description": "Completed HSC (Higher Secondary Certificate) in science with physics, chemistry, and mathematics.",
-                "location": "Daman"
+                "duration": "May 2015 - April 2018",
+                "title": "Degree - Master of Business Administration",
+                "description": "BSc Agriculture is a degree course in the field of agriculture and its applications. Agricultural science also has disciplines such as agronomy, horticulture, plant pathology, entomology, soil science, food technology, agricultural economics, home science, fisheries, forestry, and veterinary science."
             }
         ],
         "careers": [
             {
                 "premise": {
-                    "name": "Freelance"
+                    "name": "Dandy Company Ltd.",
+                    "href": "https://www.dandy.qa/",
+                    "location": "Doha, Qatar"
                 },
-                "duration": "Jan 2018 - Present",
-                "title": "Full Stack Developer",
-                "description": "A MERN stack developer with proficiency in developing interactive and elegant user-interfaces, and high performant backends. The project undertaken include business information websites, data-scraping projects, chrome extensions, and more.",
-                "roles": [
-                    "System analyst",
-                    "Architect",
-                    "Designer",
-                    "Developer",
-                    "Tester",
-                    "Dev-op"
-                ]
+                "duration": "Oct 2017 - Dec 2020",
+                "title": "National Key Account Manager",
+                "description": "A MERN stack developer with proficiency in developing interactive and elegant user-interfaces, and high performant backends. The project undertaken include business information websites, data-scraping projects, chrome extensions, and more."
             },
             {
                 "premise": {
-                    "name": "Enjay IT Solutions",
-                    "href": "https://www.enjayworld.com/"
+                    "name": "Aujan Coca-Cola Beverage Company",
+                    "href": "https://www.aujan.com/",
+                    "location": "UAE & Part of Oman"
                 },
-                "duration": "Jan 2020 - March 2020",
-                "title": "Full Stack Developer",
-                "description": "A company providing CRM and Cloud Telephony services. The job description consisted on developing a web UI for a pre-existing mobile app and integrating the web UI into the CRM's core.",
-                "roles": [
-                    "Assistant project manager",
-                    "Front-end developer"
-                ]
+                "duration": "Apr 2016 - Sept 2017",
+                "title": "Regional Branch Manager",
+                "description": "A company providing CRM and Cloud Telephony services. The job description consisted on developing a web UI for a pre-existing mobile app and integrating the web UI into the CRM's core."
             },
             {
                 "premise": {
-                    "name": "Kortiwala Institute of Programming",
-                    "href": "http://patkip.herokuapp.com/"
+                    "name": "TFC Food Co, India (Food & Beverage)",
+                    "location": "Mumbai, India"
                 },
-                "duration": "March 2019 - Present",
-                "title": "Founder | Course Developer",
-                "description": "A self-founded programming institute that provides education on the basics of computer programming using Python and JavaScript. The main candidates include college students who opted for computer related courses and school students with programming subjects in their curriculum.",
-                "roles": [
-                    "Manager",
-                    "Course developer",
-                    "Tutor"
-                ]
+                "duration": "March 2014 - Feb 2016",
+                "title": "Zonal Business Manager (South & West)",
+                "description": "A self-founded programming institute that provides education on the basics of computer programming using Python and JavaScript. The main candidates include college students who opted for computer related courses and school students with programming subjects in their curriculum."
             },
             {
                 "premise": {
-                    "name": "SSR ACS",
-                    "href": "https://ssracs.edu.in/"
+                    "name": "Al – Munajaem Group (Bakery Div)",
+                    "location": "Dammam, Saudi Arabia",
+                    "href": "https://www.munajem.com/"
                 },
-                "duration": "June 2018 - June 2019",
-                "title": "Assistant Professor - Computer Science Department",
-                "description": "A multi-college premise with divisions for graduation and post-graduation degrees. The job role consisted teaching various computer science and programming subjects using theoretical and practical methods. The main task was to figure a logical and analogical yet simple way to convey knowledge of complex computer science topics to complete beginners.",
-                "roles": [
-                    "Class coordinator",
-                    "Educator",
-                    "Practical tutor",
-                    "Examiner",
-                    "Anchor and speaker"
-                ]
+                "duration": "Feb 2013 - Nov 2013",
+                "title": "Regional Sales Manager (Eastern Region)",
+                "description": "A multi-college premise with divisions for graduation and post-graduation degrees. The job role consisted teaching various computer science and programming subjects using theoretical and practical methods. The main task was to figure a logical and analogical yet simple way to convey knowledge of complex computer science topics to complete beginners."
+            },
+            {
+                "premise": {
+                    "name": "Almarai Company",
+                    "location": "Tabuk, Saudi Arabia",
+                    "href": "https://www.almarai.com/en/"
+                },
+                "duration": "Dec 2009 - Dec 2011",
+                "title": "Regional Business Manager (Northern Region)",
+                "description": "A multi-college premise with divisions for graduation and post-graduation degrees. The job role consisted teaching various computer science and programming subjects using theoretical and practical methods. The main task was to figure a logical and analogical yet simple way to convey knowledge of complex computer science topics to complete beginners."
+            },
+            {
+                "premise": {
+                    "name": "McDonald’s India",
+                    "location": "Mumbai, India",
+                    "href": "https://www.mcdonaldsindia.com/"
+                },
+                "duration": "Feb 2008 - Nov 2009",
+                "title": "Deputy Manager - Marketing",
+                "description": "A multi-college premise with divisions for graduation and post-graduation degrees. The job role consisted teaching various computer science and programming subjects using theoretical and practical methods. The main task was to figure a logical and analogical yet simple way to convey knowledge of complex computer science topics to complete beginners."
+            },
+            {
+                "premise": {
+                    "name": "HFL Foods Ltd",
+                    "location": "Mumbai, India"
+                },
+                "duration": "June 2006 - June 2008",
+                "title": "Regional Sales Manager",
+                "description": "A multi-college premise with divisions for graduation and post-graduation degrees. The job role consisted teaching various computer science and programming subjects using theoretical and practical methods. The main task was to figure a logical and analogical yet simple way to convey knowledge of complex computer science topics to complete beginners."
+            },
+            {
+                "premise": {
+                    "name": "Ajmal Perfumes",
+                    "location": "Riyadh, Saudi Arabia",
+                    "href": "https://www.ajmalperfume.com/"
+                },
+                "duration": "Sept 2004 - Apr 2006",
+                "title": "Executive - Marketing & Sales",
+                "description": "A multi-college premise with divisions for graduation and post-graduation degrees. The job role consisted teaching various computer science and programming subjects using theoretical and practical methods. The main task was to figure a logical and analogical yet simple way to convey knowledge of complex computer science topics to complete beginners."
+            },
+            {
+                "premise": {
+                    "name": "Ajanta India Limited",
+                    "location": "Mumbai, India",
+                    "href": "https://www.almarai.com/en/"
+                },
+                "duration": "May 2003 - Aug 2004",
+                "title": "Area Sales Manager",
+                "description": "A multi-college premise with divisions for graduation and post-graduation degrees. The job role consisted teaching various computer science and programming subjects using theoretical and practical methods. The main task was to figure a logical and analogical yet simple way to convey knowledge of complex computer science topics to complete beginners."
             }
         ]
     },
@@ -132,227 +151,92 @@
         "header": {
             "lead": "If I have the belief that I can do it, I shall surely acquire the capacity to do it, even if I may not have it at the beginning - Mahatma Gandhi"
         },
-        "software": [
+        "sections": [
             {
-                "name": "HTML",
-                "rank": 5
+                "name": "Skills",
+                "nodes": [
+                    {
+                        "name": "KA - Management",
+                        "rank": "5"
+                    },
+                    {
+                        "name": "Negotiations",
+                        "rank": "5"
+                    },
+                    {
+                        "name": "Budget Planning",
+                        "rank": "5"
+                    },
+                    {
+                        "name": "Data Analysis",
+                        "rank": "4"
+                    },
+                    {
+                        "name": "Distribution Management",
+                        "rank": "5"
+                    },
+                    {
+                        "name": "P & L",
+                        "rank": "5"
+                    },
+                    {
+                        "name": "5igital Marketing",
+                        "rank": "4"
+                    },
+                    {
+                        "name": "Market Planning",
+                        "rank": "5"
+                    },
+                    {
+                        "name": "Sales Analysis",
+                        "rank": "4"
+                    }
+                ]
             },
             {
-                "name": "CSS",
-                "rank": 5
-            },
-            {
-                "name": "JavaScript",
-                "rank": 5
-            },
-            {
-                "name": "Bootstrap",
-                "rank": 5
-            },
-            {
-                "name": "Materialize CSS",
-                "rank": 5
-            },
-            {
-                "name": "REST API",
-                "rank": 5
-            },
-            {
-                "name": "ReactJS",
-                "rank": 4
-            },
-            {
-                "name": "Redux",
-                "rank": 4
-            },
-            {
-                "name": "SASS / SCSS",
-                "rank": 4
-            },
-            {
-                "name": "JSS",
-                "rank": 4
-            },
-            {
-                "name": "Node.js",
-                "rank": 4
-            },
-            {
-                "name": "Express.js",
-                "rank": 4
-            },
-            {
-                "name": "MySQL",
-                "rank": 4
-            },
-            {
-                "name": "PostgreSQL",
-                "rank": 4
-            },
-            {
-                "name": "Python",
-                "rank": 4
-            },
-            {
-                "name": "MVC Architecture",
-                "rank": 4
-            },
-            {
-                "name": "Chrome Extension",
-                "rank": 4
-            },
-            {
-                "name": "Flask",
-                "rank": 4
-            },
-            {
-                "name": "JWT",
-                "rank": 4
-            },
-            {
-                "name": "OAuth 2.0",
-                "rank": 3
-            },
-            {
-                "name": "Django",
-                "rank": 3
-            },
-            {
-                "name": "Jinja2",
-                "rank": 3
-            },
-            {
-                "name": "MongoDB",
-                "rank": 3
-            },
-            {
-                "name": "Next.js",
-                "rank": 3
-            },
-            {
-                "name": "jQuery",
-                "rank": 3
-            },
-            {
-                "name": "PHP",
-                "rank": 3
-            },
-            {
-                "name": "Laravel",
-                "rank": 3
-            },
-            {
-                "name": "Bash",
-                "rank": 3
-            },
-            {
-                "name": "TypeScript",
-                "rank": 3
-            },
-            {
-                "name": "Handlebars",
-                "rank": "2"
+                "name": "Languages",
+                "nodes": [
+                    {
+                        "name": "English",
+                        "rank": 5
+                    },
+                    {
+                        "name": "Hindi",
+                        "rank": 5
+                    },
+                    {
+                        "name": "Arabic",
+                        "rank": 4
+                    },
+                    {
+                        "name": "Marathi",
+                        "rank": 5
+                    },
+                    {
+                        "name": "Punjabi",
+                        "rank": 4
+                    },
+                    {
+                        "name": "Kannada",
+                        "rank": 3
+                    }
+                ]
             }
-        ],
-        "languages": [
+        ]
+    },
+    "achievements": {
+        "header": {
+            "lead": "Yo"
+        },
+        "points": [
             {
-                "name": "English",
-                "rank": 5
-            },
-            {
-                "name": "Hindi",
-                "rank": 5
-            },
-            {
-                "name": "Gujarati",
-                "rank": 5
-            },
-            {
-                "name": "Marathi",
-                "rank": 2
+                "name": "Three times University Captain for T.T, university player for Wrestling, Weight- Lifting, Badminton. Students Merit Scholarship Holder",
+                "date": "2011",
+                "attachments": [
+                    "#"
+                ]
             }
-        ],
-        "tools": [
-            {
-                "name": "NPM",
-                "rank": 5
-            },
-            {
-                "name": "Visual Studio Code",
-                "rank": 5
-            },
-            {
-                "name": "Linux (Ubuntu | Arch)",
-                "rank": 5
-            },
-            {
-                "name": "Microsoft Windows",
-                "rank": 5
-            },
-            {
-                "name": "Microsoft Office",
-                "rank": 5
-            },
-            {
-                "name": "Sublime Text 3",
-                "rank": 4
-            },
-            {
-                "name": "Webpack",
-                "rank": 3
-            },
-            {
-                "name": "Babel",
-                "rank": 3
-            },
-            {
-                "name": "Git",
-                "rank": 3
-            },
-            {
-                "name": "Postman",
-                "rank": 3
-            },
-            {
-                "name": "Nginx",
-                "rank": 3
-            },
-            {
-                "name": "AWS",
-                "rank": 3
-            },
-            {
-                "name": "Heroku",
-                "rank": 3
-            },
-            {
-                "name": "Jest",
-                "rank": 3
-            },
-            {
-                "name": "CorelDraw",
-                "rank": 3
-            },
-            {
-                "name": "LAMP / WAMP",
-                "rank": 3
-            },
-            {
-                "name": "SSH",
-                "rank": 3
-            },
-            {
-                "name": "UML",
-                "rank": 3
-            },
-            {
-                "name": "Docker",
-                "rank": 2
-            },
-            {
-                "name": "Cypress",
-                "rank": 1
-            }
+           
         ]
     },
     "projects": {

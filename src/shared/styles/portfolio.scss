@@ -157,12 +157,40 @@ ol {
             color: inherit;
         }
     }
+    .sub {
+        display: block;
+        position: relative;
+        top: -10px;
+        margin-bottom: 5px;
+        // font-size: 0.85rem;
+
+        a {
+            color: inherit;
+            text-decoration: underline;
+        }
+    }
+
+    .location {
+        margin-bottom: 0;
+        img {
+            width: 0.6rem;
+            margin-right: 4px;
+        }
+    }
+
+    // .sub,
+    // .location {
+    //     position: relative;
+    //     top: -10px;
+    // }
 }
 
 #abilities {
     li {
         display: flex;
         line-height: 2;
+        margin: 5px 0;
+        
         .skill {
             flex: 3;
             display: inline-block;
@@ -174,6 +202,26 @@ ol {
             display: flex;
             gap: 3px;
             justify-content: flex-end;
+        }
+    }
+}
+
+#achievements {
+    .achievement-list {
+        list-style-type: none;
+        padding: 0 1rem;
+
+        li {
+            padding-left: 0.5rem;
+            
+            p {
+                margin: 0;
+            }
+
+            .attachments {
+                display: flex;
+                gap: 1rem
+            }
         }
     }
 }
@@ -399,7 +447,6 @@ ol {
                 max-width: 350px;
             }
         }
-
     }
     #experiences .row {
         page-break-inside: avoid;
@@ -446,7 +493,7 @@ ol {
                     position: relative;
                     top: 0;
                     left: 0;
-                    text-align: center;                 
+                    text-align: center;
 
                     h4 {
                         color: rgb(58, 57, 57);
@@ -468,7 +515,6 @@ ol {
     #contact {
         page-break-before: avoid;
         page-break-inside: avoid;
-
 
         * {
             color: #6d6c6c;
