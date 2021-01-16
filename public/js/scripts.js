@@ -73,7 +73,9 @@ function navbarMobile(nav, profile_section) {
 function navCollapseFix() {
     document.querySelectorAll('.nav-link').forEach((nav_link) => {
         nav_link.addEventListener('click', function () {
-            document.querySelector('.navbar-toggler').click()
+            if (window.innerWidth < 992) {
+                document.querySelector('.navbar-toggler').click()
+            }
         })
     })
 }
