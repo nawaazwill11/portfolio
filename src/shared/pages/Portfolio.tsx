@@ -132,6 +132,10 @@ const Profile = ({ data }: { data: TSectionProfile }) => {
                             }
                         </div>
                     </div>
+                    <div className="aim">
+                        <h3>Aim</h3>
+                        <p>I 'm seeking for a role of a <em>Business Head</em>, <em>Country Manager</em>, <em>Head - Sales &amp; Distribution</em>, <em>Deputy General Manager</em>, <em>Regional Manager (GCC)</em>, or any similar roles in an <em>Esteemed Organization</em>.</p>
+                    </div>
                 </div>
             </div>
         </section>
