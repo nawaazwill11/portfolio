@@ -30,11 +30,11 @@ export type TExperience = {
         name: string,
         sub: string,
         href: string,
+        location?: string,
     },
     duration: string,
     title: string,
-    description: string,
-    location?: string,
+    description: string | Array<string>,
     roles?: Array<string>,
 }
 
@@ -61,6 +61,7 @@ export type TSectionAbilities = {
 
 export type TAchievementsPoint = {
     name: string,
+    description: string,
     date: string,
     attachments: Array<string>
 }

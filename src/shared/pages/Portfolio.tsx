@@ -1,7 +1,19 @@
 import { useEffect, useRef, useState } from "react"
 import { connect } from 'react-redux'
-import { TAbilitiesSection, TAppState, TPageProps, TRank, TSectionAbilities, TSectionContact, TSectionExperience, TSectionIntroduction, TSectionProfile, TSectionProjects, TSectionAchievements, TAchievementsPoint } from "../../types/portfolio"
+import { TAbilitiesSection, TAppState, TPageProps, TRank, TSectionAbilities, TSectionContact, TSectionExperience, TSectionIntroduction, TSectionProfile, TSectionProjects, TSectionAchievements, TAchievementsPoint, TExperience } from "../../types/portfolio"
 import { addWindowEvents, setSectionsOffsets } from '../reducers/portfolio'
+
+function ifElem(data, elem, not = '') {
+    return data ? elem : not
+}
+
+
+function capitalizeAll(string) {
+    return string
+        .split(' ')
+        .map(word => word[0].toUpperCase() + word.slice(1,))
+        .join(' ')
+}
 
 const Navbar = () => {
     const links = [
@@ -132,7 +144,7 @@ const Experiences = ({ data }: { data: TSectionExperience }) => {
     // console.log(data)
 
 
-    const xpFactory = (xps) => (
+    const xpFactory = (xps: Array<TExperience>) => (
         xps.map((xp) => {
             return (
                 <div key={Math.random()} className="row">
@@ -161,7 +173,19 @@ const Experiences = ({ data }: { data: TSectionExperience }) => {
                         <p>
                             <strong>{xp.title}</strong>
                         </p>
-                        <p>{xp.description}</p>
+                        {
+                            typeof xp.description === 'string'
+                                ? <p>{xp.description}</p>
+                                : (
+                                    <ul>
+                                        {
+                                            xp.description.map(desc => (
+                                                <li>{desc}</li>
+                                            ))
+                                        }
+                                    </ul>
+                                )
+                        }
                         {
                             xp.roles ?
                                 (
@@ -259,39 +283,65 @@ const Abilities = ({ data }: { data: TSectionAbilities }) => {
     )
 }
 
+
+
 const Achievements = ({ data }: { data: TSectionAchievements }) => {
+
+    const achievements = () => {
+        const sorted_points = data.points
+            .map(p => p)
+            .sort((a, b) => Number(b.date) - Number(a.date))
+
+        const half = Math.ceil(sorted_points.length / 2)
+
+        return [sorted_points.slice(0, half), sorted_points.slice(half,)].map(points => (
+            <div className="col-lg-6">
+                <ul className="achievement-list">
+                    {
+                        points.map((point: TAchievementsPoint) => (
+                            <li key={Math.random()}>
+                                <div className="name"><strong>{capitalizeAll(point.name)}</strong></div>
+                                {ifElem(point.description, <div>{point.description}</div>)}
+                                <div className="info">
+                                    <span>
+                                        {point.date}
+                                    </span>
+                                    {ifElem(
+                                        point.attachments?.length,
+                                        <>
+                                            <span>-</span>
+                                            <span>[</span>
+                                            <span className="attachments">
+
+                                                {
+                                                    point.attachments?.map((attachment: string, i: number) => (
+                                                        <a key={Math.random()} className="attachment-link" href={`/static/attachments/${attachment}`} target="_blank" rel="noreferer noopener">{i + 1}</a>
+                                                    ))
+                                                }
+                                            </span>
+                                            <span>]</span>
+                                        </>
+
+                                    )}
+                                </div>
+
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+        ))
+    }
+
     return (
-        <section id="achievements">
+        <section id="achievements" className="body-colored">
             <div className="container">
                 <h2 className="section-header">Achievements</h2>
                 {/* <p className="lead">{data.header.lead}</p> */}
                 <hr />
                 <div className="content">
                     <div className="row">
-                        <ul className="achievement-list">
-                            {
-                                data.points.map((point: TAchievementsPoint) => (
-                                    <li>
-                                        <div className="point">
-                                            <span><strong>{point.name}</strong></span>
-                                        </div>
-                                        <div className="date">
-                                            <span>{point.date}</span>
-                                            {/* <span><strong>Date: </strong></span> */}
-                                        </div>
-                                        <div className="attachments">
-                                            {/* <span><strong>Attachments: </strong></span> */}
-                                            {
-                                                point.attachments.map((attachment: string, i: number) => (
-                                                    <a key={Math.random()} className="attachment-link" href={attachment} target="_blank" rel="noreferer noopener">{i + 1}</a>
-                                                ))
-                                            }
-                                        </div>
-                                        <div className="border"></div>
-                                    </li>
-                                ))
-                            }
-                        </ul>
+                        {achievements()}
                     </div>
                 </div>
             </div>
@@ -420,7 +470,7 @@ const Page = ({
             <Experiences data={state.data.experiences} />
             <Abilities data={state.data.abilities} />
             <Achievements data={state.data.achievements} />
-            <Projects data={state.data.projects} />
+            {/* <Projects data={state.data.projects} /> */}
             <Contact data={state.data.contact} />
         </>
     )

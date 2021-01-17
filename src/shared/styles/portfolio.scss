@@ -145,6 +145,10 @@ ol {
     .row {
         margin-top: 1rem;
         margin-bottom: 2rem;
+
+        ul {
+            padding: 0 1rem;
+        }
     }
 
     h3 {
@@ -190,7 +194,7 @@ ol {
         display: flex;
         line-height: 2;
         margin: 5px 0;
-        
+
         .skill {
             flex: 3;
             display: inline-block;
@@ -212,15 +216,21 @@ ol {
         padding: 0 1rem;
 
         li {
-            padding-left: 0.5rem;
-            
-            p {
-                margin: 0;
-            }
+            margin-bottom: 1rem;
 
-            .attachments {
+            .info {
                 display: flex;
-                gap: 1rem
+
+                span:nth-child(2) {
+                    margin: 0 0.5rem;
+                }
+
+                .attachments {
+                    a {
+                        padding: 0 0.5rem;
+                        color: #e33939;
+                    }
+                }
             }
         }
     }
@@ -369,6 +379,9 @@ ol {
 @media screen and (max-width: 991px) {
     .profile-row {
         text-align: center;
+    }
+    .experiences .row {
+        gap: 1rem;
     }
 }
 
