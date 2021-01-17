@@ -38,25 +38,25 @@
         "educations": [
             {
                 "premise": {
-                    "name": "SIBER Institute",
+                    "name": "Degree - Master of Business Administration",
                     "sub": "Shivaji University",
                     "href": "http://www.siberindia.edu.in/",
                     "location": "Kohlapur, India"
                 },
                 "duration": "May 2015 - April 2018",
-                "title": "Degree - Master of Business Administration",
-                "description": "The MBA in marketing prepares you for more than careers in marketing. Some of the career options will include consulting, entrepreneurial careers, and general management. The marketing MBA teaches skills you use in any field. You learn skills such as mathematics, communications, analytical, and, of course, management."
+                "title": "SIBER Institute",
+                "description": "Specialization in Marketing and Production"
             },
             {
                 "premise": {
-                    "name": " College of Agriculture ",
+                    "name": "Degree - Bachelor of Science",
                     "sub": "Mahatma Phule Krishi Vidyapeeth",
                     "href": "https://www.ackolhapur.edu.in/",
                     "location": "Kohlapur, India"
                 },
                 "duration": "May 2015 - April 2018",
-                "title": "Degree - Master of Business Administration",
-                "description": "BSc Agriculture is a degree course in the field of agriculture and its applications. Agricultural science also has disciplines such as agronomy, horticulture, plant pathology, entomology, soil science, food technology, agricultural economics, home science, fisheries, forestry, and veterinary science."
+                "title": "College of Agriculture",
+                "description": "Specialization in Agriculture"
             }
         ],
         "careers": [
@@ -299,6 +299,10 @@
                 "nodes": [
                     {
                         "name": "English",
+                        "rank": 5
+                    },
+                    {
+                        "name": "Gujarati",
                         "rank": 5
                     },
                     {

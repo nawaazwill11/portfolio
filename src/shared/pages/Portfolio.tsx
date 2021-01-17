@@ -172,17 +172,20 @@ const Experiences = ({ data }: { data: TSectionExperience }) => {
                             <strong>{xp.title}</strong>
                         </p>
                         {
-                            typeof xp.description === 'string'
-                                ? <p>{xp.description}</p>
-                                : (
-                                    <ul>
-                                        {
-                                            xp.description.map(desc => (
-                                                <li>{desc}</li>
-                                            ))
-                                        }
-                                    </ul>
-                                )
+                            xp.description
+                                ?
+                                typeof xp.description === 'string'
+                                    ? <p>{xp.description}</p>
+                                    : (
+                                        <ul>
+                                            {
+                                                xp.description.map(desc => (
+                                                    <li>{desc}</li>
+                                                ))
+                                            }
+                                        </ul>
+                                    )
+                                : ''
                         }
                         {
                             xp.roles ?
