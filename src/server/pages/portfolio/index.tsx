@@ -21,7 +21,7 @@ head_data = {
     meta: [
         {
             name: 'description',
-            content: 'Nawaaz Kortiwala Portfolio page'
+            content: 'Baha Hamdulay Portfolio page'
         },
     ],
     link: [

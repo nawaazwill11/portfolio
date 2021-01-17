@@ -130,11 +130,6 @@ const Profile = ({ data }: { data: TSectionProfile }) => {
                                     </p>
                                 ))
                             }
-                            {/* <div className="social">
-                                <a className="btn btn-primary" href="https://www.linkedin.com/in/nawaaz-kortiwala-a01099113/" target="_blank" rel="norefere noopener">
-                                    <img className="social-button" src="/static/img/svg/linkedin.svg" />
-                                </a>
-                            </div> */}
                         </div>
                     </div>
                 </div>
@@ -451,12 +446,6 @@ const Contact = ({ data }: { data: TSectionContact }) => {
                     </div>
                 </div>
             </div>
-            {/* <div className="reference-attribute">
-                Inspired by <a href="http://www.pascalvangemert.nl/" target="_blank" rel="noreferer noopener">Pascal Van Gemert</a>
-            </div> */}
-            {/* <div className="portfolio-redirect">
-                <a href="https://nawaaz.dev/portfolio">Check out my Interactive Portofolio for more</a>
-            </div> */}
         </footer>
     )
 }

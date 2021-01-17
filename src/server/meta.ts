@@ -1,30 +1,30 @@
 export default {
     portfolio: {
-        title: 'Interactive Portfolio - Nawaaz Kortiwala',
+        title: 'Interactive Portfolio - Baha Hamdulay',
         meta: [
             {
                 name: "description",
-                content: "Nawaaz Kortiwala: A MERN Stack Dev",
+                content: "Baha Hamdulay: A MERN Stack Dev",
             },
             {
                 property: "og:site_name",
-                content:"Nawaaz Kortiwala's Web Portal",
+                content:"Baha Hamdulays's Web Portal",
             },
             {
                 property: "og:url",
-                content: 'https://nawaaz.dev/portfolio',
+                content: 'https://bahahamdulay.com/portfolio',
             },
             {
                 property: "og:title",
-                content: "Interactive Portfolio - Nawaaz Kortiwala",
+                content: "Interactive Portfolio - Baha Hamdulay",
             },
             {
                 property: "og:description",
-                content: "An interactive porfolio page to portay Nawaaz Kortiwala's skillset, experience, and work.",
+                content: "An interactive porfolio page to portay Baha Hamdulay's skillset, experience, and work.",
             },
             {
                 property: "og:image",
-                content: 'https://nawaaz.dev/static/img/me.jpg',
+                content: 'https://bahahamdulay.com/static/img/me.jpg',
             },
             {
                 property: "og:image:type",
