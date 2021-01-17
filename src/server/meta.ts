@@ -4,7 +4,7 @@ export default {
         meta: [
             {
                 name: "description",
-                content: "Baha Hamdulay: A MERN Stack Dev",
+                content: "Baha Hamdulay: A Condfident, Persuasive, Result Driven and Strategic Thinker",
             },
             {
                 property: "og:site_name",
