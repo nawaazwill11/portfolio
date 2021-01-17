@@ -19,8 +19,11 @@ export type TSectionProfile = {
     img: string,
     details: {
         name: string,
-        age: string,
-        location: string,
+        age: Array<string>,
+        gender: string,
+        marital: string,
+        religion: string,
+        nationality: string,
         hobbies: Array<string>,
     }
 }

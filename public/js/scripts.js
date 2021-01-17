@@ -88,7 +88,7 @@ window.onload = () => {
         'profile',
         'experiences',
         'abilities',
-        'projects',
+        'achievements',
         'contact'
     ]
 

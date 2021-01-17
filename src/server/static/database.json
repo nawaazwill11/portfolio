@@ -17,8 +17,11 @@
         "img": "me.jpg",
         "details": {
             "name": "Bhawhuddin Hamdulay",
-            "age": "1977-09-08",
-            "location": "Daman, Daman & Diu (U.T.), India",
+            "age": ["08", "09", "1977"],
+            "gender": "Male",
+            "marital": "Married",
+            "religion": "Islam",
+            "nationality": "Indian",
             "hobbies": [
                 "Sports",
                 "Writing",
@@ -262,7 +265,7 @@
                     },
                     {
                         "name": "Data Analysis",
-                        "rank": "4"
+                        "rank": "5"
                     },
                     {
                         "name": "Distribution Management",
@@ -273,8 +276,8 @@
                         "rank": "5"
                     },
                     {
-                        "name": "5igital Marketing",
-                        "rank": "4"
+                        "name": "Digital Marketing",
+                        "rank": "5"
                     },
                     {
                         "name": "Market Planning",
@@ -282,8 +285,13 @@
                     },
                     {
                         "name": "Sales Analysis",
-                        "rank": "4"
+                        "rank": "5"
+                    },
+                    {
+                        "name": "Strategic Alliances",
+                        "rank": "5"
                     }
+
                 ]
             },
             {

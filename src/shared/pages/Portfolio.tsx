@@ -30,8 +30,8 @@ const Navbar = () => {
             href: '#abilities'
         },
         {
-            name: 'Projects',
-            href: '#projects'
+            name: 'Achievements',
+            href: '#achievements'
         },
         {
             name: 'Contact',
@@ -82,22 +82,25 @@ const Introduction = ({ data }: { data: TSectionIntroduction }) => {
 
 const Profile = ({ data }: { data: TSectionProfile }) => {
 
-    const getAge = () => {
-        const today = new Date()
-        let age = today.getFullYear() - new Date(data.details.age).getFullYear()
-        let has_birthday_passed = false
+    // const getAge = () => {
+    //     const today = new Date()
+    //     let age = today.getFullYear() - new Date(data.details.age).getFullYear()
+    //     let has_birthday_passed = false
 
-        if (today.getMonth() + 1 > 11 || (today.getMonth() + 1 === 11 && today.getDate() >= 24)) {
-            has_birthday_passed = true
-        }
+    //     if (today.getMonth() + 1 > 11 || (today.getMonth() + 1 === 11 && today.getDate() >= 24)) {
+    //         has_birthday_passed = true
+    //     }
 
-        return !has_birthday_passed ? age - 1 : age
-    }
+    //     return !has_birthday_passed ? age - 1 : age
+    // }
 
     const details = [
         ['Name', data.details.name],
-        ['Age', getAge()],
-        ['Location', data.details.location],
+        ['Date of Birth', data.details.age.join(' - ')],
+        // ['Age', getAge()],
+        ['Gender', data.details.gender],
+        ['Religon', data.details.religion],
+        ['Nationality', data.details.nationality],
         ['Hobbies', data.details.hobbies.join(', ')],
     ]
 
@@ -424,35 +427,36 @@ const Contact = ({ data }: { data: TSectionContact }) => {
                 <div className="content">
                     <div className="row handler-row">
                         <div className="col-4 text-center">
-                            <a href="https://www.linkedin.com/in/nawaaz-kortiwala-a01099113/" target="_blank" rel="noreferer noopener">
+                            <a href="https://www.linkedin.com/in/baha-hamdulay-mba-35888314" target="_blank" rel="noreferer noopener">
                                 <img src="/static/img/svg/linkedin.svg" alt="" />
                             </a>
                         </div>
                         <div className="col-4 text-center">
-                            <a href="https://www.github.com/nawaazwill11" target="_blank" rel="noreferer noopener">
-                                <img src="/static/img/svg/github.svg" alt="" />
+                            <a href="https://join.skype.com/invite/iBkD3OzH8hh4" target="_blank" rel="noreferer noopener">
+                                <img src="/static/img/svg/skype.svg" alt="" />
 
                             </a>
                         </div>
                         <div className="col-4 text-center">
-                            <a href="mailto:nawaazkortiwala@gmail.com">
+                            <a href="mailto:baha4baha@gmail.com">
                                 <img src="/static/img/svg/mail.svg" alt="" />
                             </a>
                         </div>
                     </div>
                     <hr />
                     <div className="hire-me">
-                        <h3>Want to hire me?</h3>
-                        <h4>Contact me on: <a href="tel:+919737177329">+91 97371 77329</a></h4>
+                        <h3>Mobile</h3>
+                        <h4><a href="tel:+917698687729">+91 76986 87729</a></h4>
+                        <h4><a href="tel:+97455987574">+974 55987574</a></h4>
                     </div>
                 </div>
             </div>
-            <div className="reference-attribute">
+            {/* <div className="reference-attribute">
                 Inspired by <a href="http://www.pascalvangemert.nl/" target="_blank" rel="noreferer noopener">Pascal Van Gemert</a>
-            </div>
-            <div className="portfolio-redirect">
+            </div> */}
+            {/* <div className="portfolio-redirect">
                 <a href="https://nawaaz.dev/portfolio">Check out my Interactive Portofolio for more</a>
-            </div>
+            </div> */}
         </footer>
     )
 }
