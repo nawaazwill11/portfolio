@@ -9,7 +9,7 @@ const head = {
 Handlebars.registerHelper('link', function (item, options) {
     return `<link ${Object.entries(item).reduce((attr_str, attr) => (attr_str += ` ${attr[0]}="${attr[1]}"`), '')} />`
 })
-\
+
 link_list = [{
     href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css',
     rel: 'stylsheet',
