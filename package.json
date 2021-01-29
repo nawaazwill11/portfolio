@@ -9,7 +9,7 @@
     "dev:run-all": "concurrently \"yarn dev:server\" \"yarn dev:wds\" ",
     "dev:server": "cross-env NODE_ENV=development nodemon --exec babel-node --config-file ./babel.config.json --extensions .ts,.tsx,.js src/server",
     "build": "rimraf build && babel --extensions .ts,.tsx,.js ./src --ignore ./src/client -d ./build && cross-env NODE_ENV=production webpack --progress",
-    "prod:start": "cross-env NODE_ENV=production pm2 start build/server && pm2 logs",
+    "prod:start": "yarn prod:build && cross-env NODE_ENV=production pm2 start build/server && pm2 logs",
     "prod:stop": "pm2 delete server",
     "prod:restart": "yarn prod:stop && yarn prod:start",
     "test": "echo \"Error: no test specified\" && exit 1"
