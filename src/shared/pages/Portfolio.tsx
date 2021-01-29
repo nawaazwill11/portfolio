@@ -96,10 +96,10 @@ const Profile = ({ data }: { data: TSectionProfile }) => {
 
     const details = [
         ['Name', data.details.name],
-        ['Date of Birth', data.details.age.join(' - ')],
+        ['Date of Birth', data.details.age.join('/')],
         // ['Age', getAge()],
         ['Gender', data.details.gender],
-        ['Religon', data.details.religion],
+        ['Religion', data.details.religion],
         ['Nationality', data.details.nationality],
         ['Hobbies', data.details.hobbies.join(', ')],
     ]
@@ -132,10 +132,10 @@ const Profile = ({ data }: { data: TSectionProfile }) => {
                             }
                         </div>
                     </div>
-                    <div className="aim">
+                    {/* <div className="aim">
                         <h3>Aim</h3>
                         <p>I 'm seeking for a role of a <em>Business Head</em>, <em>Country Manager</em>, <em>Head - Sales &amp; Distribution</em>, <em>Deputy General Manager</em>, <em>Regional Manager (GCC)</em>, or any similar roles in an <em>Esteemed Organization</em>.</p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>
