@@ -411,10 +411,6 @@ const Contact = ({ data }: { data: TSectionContact }) => {
 };
 
 const Page = ({ state, setActiveNav }: TPageProps) => {
-  useEffect(() => {
-    window.print();
-  });
-
   return (
     <>
       <Navbar />
