@@ -297,6 +297,10 @@
         "rank": 5
       },
       {
+        "name": "Git",
+        "rank": 4
+      },
+      {
         "name": "Sublime Text 3",
         "rank": 4
       },
@@ -306,10 +310,6 @@
       },
       {
         "name": "Babel",
-        "rank": 3
-      },
-      {
-        "name": "Git",
         "rank": 3
       },
       {
