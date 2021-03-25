@@ -1,482 +1,462 @@
 {
-    "introduction": {
-        "header": {
-            "large": "Nawaaz Kortiwala",
-            "lead": "Interactive Resume"
-        },
-        "background": [
-            "super-duke.jpg",
-            "super-duke2.jpg",
-            "super-duke3.jpg"
-        ]
+  "introduction": {
+    "header": {
+      "large": "Nawaaz Kortiwala",
+      "lead": "Interactive Resume"
     },
-    "profile": {
-        "header": {
-            "lead": "I'm a proficient JavaScript developer"
-        },
-        "about_me": "I'm a full-stack developer with a love for JavaScript. I focus on creating web applications that are simplistic and elegant in design. I'm good at finding and fixing problems, and I give extra attention to details. I've an immense interest in learning and trying out new things. I'm comfortable working with people as well as in a solo-mode. I'm output-oriented and I don't stop until I've delivered.",
-        "img": "me.jpg",
-        "details": {
-            "name": "Nawaaz Kortiwala",
-            "age": "1993-11-24",
-            "location": "Daman, Daman & Diu (U.T.), India",
-            "hobbies": [
-                "Coding",
-                "Reading",
-                "Photography",
-                "Sports",
-                "Traveling"
-            ]
-        }
+    "background": ["super-duke.jpg", "super-duke2.jpg", "super-duke3.jpg"]
+  },
+  "profile": {
+    "header": {
+      "lead": "I'm a proficient JavaScript developer"
     },
-    "experiences": {
-        "header": {
-            "lead": "Information is not knowledge. The only source of knowledge is experience. You need experience to gain wisdom - Albert Einstein"
-        },
-        "educations": [
-            {
-                "premise": {
-                    "name": "Sinhgad Institutes",
-                    "sub": "Savitribai Phule (Pune) University",
-                    "href": "http://www.sinhgad.edu/"
-                },
-                "duration": "May 2015 - April 2018",
-                "title": "Degree - Master of Computer Application",
-                "description": "The course was based on a broad curriculum consisting of data structures and algorithms, optimization techniques, probability and combinatorics, object oriented analysis and design, advanced web technologies, and software development to name a few. The course’s concurrent evaluation (CE) consisted of case studies, field visits and study tours, group discussion, industry analysis, and model development / simulation exercises, and live projects.",
-                "location": "Pune"
-            },
-            {
-                "premise": {
-                    "name": "SSR ACS",
-                    "href": "https://ssracs.edu.in/"
-                },
-                "duration": "May 2012 - April 2015",
-                "title": "Degree - Bachelor of Computer Application",
-                "description": "The graduation course consisted of both technical and business aspects. The curriculum consisted of business subjects such as marketing, management, and accounting. IN the technical dimension, the course taught computer fundamentals, file structure and database concepts, problem solving and algorithms, networking, software engineering concepts, cyber security, and internet programming.",
-                "location": "Silvassa"
-            },
-            {
-                "premise": {
-                    "name": "Mahatma Gandhi Vidhyalaya",
-                    "href": "https://goo.gl/maps/Twbrg8s5LMjyft3e8"
-                },
-                "duration": "May 2010 - April 2012",
-                "title": "High School - PCM",
-                "description": "Completed HSC (Higher Secondary Certificate) in science with physics, chemistry, and mathematics.",
-                "location": "Daman"
-            }
-        ],
-        "careers": [
-            {
-                "premise": {
-                    "name": "Freelance"
-                },
-                "duration": "Jan 2018 - Present",
-                "title": "Full Stack Developer",
-                "description": "A MERN stack developer with proficiency in developing interactive and elegant user-interfaces, and high performant backends. The project undertaken include business information websites, data-scraping projects, chrome extensions, and more.",
-                "roles": [
-                    "System analyst",
-                    "Architect",
-                    "Designer",
-                    "Developer",
-                    "Tester",
-                    "Dev-op"
-                ]
-            },
-            {
-                "premise": {
-                    "name": "Enjay IT Solutions",
-                    "href": "https://www.enjayworld.com/"
-                },
-                "duration": "Jan 2020 - March 2020",
-                "title": "Full Stack Developer",
-                "description": "A company providing CRM and Cloud Telephony services. The job description consisted on developing a web UI for a pre-existing mobile app and integrating the web UI into the CRM's core.",
-                "roles": [
-                    "Assistant project manager",
-                    "Front-end developer"
-                ]
-            },
-            {
-                "premise": {
-                    "name": "Kortiwala Institute of Programming",
-                    "href": "http://patkip.herokuapp.com/"
-                },
-                "duration": "March 2019 - Present",
-                "title": "Founder | Course Developer",
-                "description": "A self-founded programming institute that provides education on the basics of computer programming using Python and JavaScript. The main candidates include college students who opted for computer related courses and school students with programming subjects in their curriculum.",
-                "roles": [
-                    "Manager",
-                    "Course developer",
-                    "Tutor"
-                ]
-            },
-            {
-                "premise": {
-                    "name": "SSR ACS",
-                    "href": "https://ssracs.edu.in/"
-                },
-                "duration": "June 2018 - June 2019",
-                "title": "Assistant Professor - Computer Science Department",
-                "description": "A multi-college premise with divisions for graduation and post-graduation degrees. The job role consisted teaching various computer science and programming subjects using theoretical and practical methods. The main task was to figure a logical and analogical yet simple way to convey knowledge of complex computer science topics to complete beginners.",
-                "roles": [
-                    "Class coordinator",
-                    "Educator",
-                    "Practical tutor",
-                    "Examiner",
-                    "Anchor and speaker"
-                ]
-            }
-        ]
-    },
-    "abilities": {
-        "header": {
-            "lead": "If I have the belief that I can do it, I shall surely acquire the capacity to do it, even if I may not have it at the beginning - Mahatma Gandhi"
-        },
-        "software": [
-            {
-                "name": "HTML",
-                "rank": 5
-            },
-            {
-                "name": "CSS",
-                "rank": 5
-            },
-            {
-                "name": "JavaScript",
-                "rank": 5
-            },
-            {
-                "name": "Bootstrap",
-                "rank": 5
-            },
-            {
-                "name": "Materialize CSS",
-                "rank": 5
-            },
-            {
-                "name": "REST API",
-                "rank": 5
-            },
-            {
-                "name": "ReactJS",
-                "rank": 4
-            },
-            {
-                "name": "Redux",
-                "rank": 4
-            },
-            {
-                "name": "SASS / SCSS",
-                "rank": 4
-            },
-            {
-                "name": "JSS",
-                "rank": 4
-            },
-            {
-                "name": "Node.js",
-                "rank": 4
-            },
-            {
-                "name": "Express.js",
-                "rank": 4
-            },
-            {
-                "name": "MySQL",
-                "rank": 4
-            },
-            {
-                "name": "PostgreSQL",
-                "rank": 4
-            },
-            {
-                "name": "Python",
-                "rank": 4
-            },
-            {
-                "name": "MVC Architecture",
-                "rank": 4
-            },
-            {
-                "name": "Chrome Extension",
-                "rank": 4
-            },
-            {
-                "name": "Flask",
-                "rank": 4
-            },
-            {
-                "name": "JWT",
-                "rank": 4
-            },
-            {
-                "name": "OAuth 2.0",
-                "rank": 3
-            },
-            {
-                "name": "Django",
-                "rank": 3
-            },
-            {
-                "name": "Jinja2",
-                "rank": 3
-            },
-            {
-                "name": "MongoDB",
-                "rank": 3
-            },
-            {
-                "name": "Next.js",
-                "rank": 3
-            },
-            {
-                "name": "jQuery",
-                "rank": 3
-            },
-            {
-                "name": "PHP",
-                "rank": 3
-            },
-            {
-                "name": "Laravel",
-                "rank": 3
-            },
-            {
-                "name": "Bash",
-                "rank": 3
-            },
-            {
-                "name": "TypeScript",
-                "rank": 3
-            },
-            {
-                "name": "Handlebars",
-                "rank": "2"
-            }
-        ],
-        "languages": [
-            {
-                "name": "English",
-                "rank": 5
-            },
-            {
-                "name": "Hindi",
-                "rank": 5
-            },
-            {
-                "name": "Gujarati",
-                "rank": 5
-            },
-            {
-                "name": "Marathi",
-                "rank": 2
-            }
-        ],
-        "tools": [
-            {
-                "name": "NPM",
-                "rank": 5
-            },
-            {
-                "name": "Visual Studio Code",
-                "rank": 5
-            },
-            {
-                "name": "Linux (Ubuntu | Arch)",
-                "rank": 5
-            },
-            {
-                "name": "Microsoft Windows",
-                "rank": 5
-            },
-            {
-                "name": "Microsoft Office",
-                "rank": 5
-            },
-            {
-                "name": "Sublime Text 3",
-                "rank": 4
-            },
-            {
-                "name": "Webpack",
-                "rank": 3
-            },
-            {
-                "name": "Babel",
-                "rank": 3
-            },
-            {
-                "name": "Git",
-                "rank": 3
-            },
-            {
-                "name": "Postman",
-                "rank": 3
-            },
-            {
-                "name": "Nginx",
-                "rank": 3
-            },
-            {
-                "name": "AWS",
-                "rank": 3
-            },
-            {
-                "name": "Heroku",
-                "rank": 3
-            },
-            {
-                "name": "Jest",
-                "rank": 3
-            },
-            {
-                "name": "CorelDraw",
-                "rank": 3
-            },
-            {
-                "name": "LAMP / WAMP",
-                "rank": 3
-            },
-            {
-                "name": "SSH",
-                "rank": 3
-            },
-            {
-                "name": "UML",
-                "rank": 3
-            },
-            {
-                "name": "Docker",
-                "rank": 2
-            },
-            {
-                "name": "Cypress",
-                "rank": 1
-            }
-        ]
-    },
-    "projects": {
-        "header": {
-            "lead": "Quality means doing it right when no one is looking - Henry Ford"
-        },
-        "projects": [
-            {
-                "name": "MerchImpulse",
-                "img": "merchimpulse.png",
-                "description": "A tool to generate top search term for Merch By Amazon (Website + Chrome Extension)",
-                "tags": [
-                    "ReactJS",
-                    "Redux",
-                    "Webpack",
-                    "Babel",
-                    "Express.js",
-                    "MongoDB",
-                    "Chrome Extension",
-                    "JWT",
-                    "Jest",
-                    "NGINX",
-                    "AWS"
-                ],
-                "duration": "8 months",
-                "ongoing": true,
-                "href": "https://merchimpulse.com"
-            },
-            {
-                "name": "KIP",
-                "img": "kip.png",
-                "description": "Website for Kortiwala Institute of Programming",
-                "tags": [
-                    "Next.js",
-                    "Bootstrap"
-                ],
-                "duration": "1 week",
-                "ongoing": false,
-                "href": "https://patkip.com"
-            },
-            {
-                "name": "Endless Miles",
-                "img": "endlessmiles.png",
-                "description": "A travel planner and event organizer website",
-                "tags": [
-                    "Django",
-                    "PostgreSQL",
-                    "Jinja2",
-                    "JavaScript",
-                    "Bootstrap"
-                ],
-                "duration": "2 months",
-                "ongoing": false,
-                "href": "http://endlessmiles101.herokuapp.com/em/"
-            },
-            {
-                "name": "Shreevarada",
-                "img": "shreevarada.png",
-                "description": "Business information website for Shreevarada Enterprise",
-                "tags": [
-                    "Flask",
-                    "Jinja2",
-                    "Vanilla JavaScript",
-                    "Materialize CSS"
-                ],
-                "duration": "1 months",
-                "ongoing": false,
-                "href": "http://shreevaradaenterprise.com"
-            },
-            {
-                "name": "GP Alt",
-                "img": "gpalt.png",
-                "description": "A Google People contacts manager app",
-                "tags": [
-                    "Laravel",
-                    "MySQL",
-                    "Vanilla JavaScript",
-                    "OAuth 2.0",
-                    "Google People REST API"
-                ],
-                "duration": "3 weeks",
-                "ongoing": false,
-                "href": "http://gpalt.herokuapp.com"
-            },
-            {
-                "name": "Pasta Sauce",
-                "img": "pastasauce.png",
-                "description": "A Pomodoro stopwatch (PWA)",
-                "tags": [
-                    "HTML",
-                    "CSS",
-                    "JavaScript",
-                    "PWA"
-                ],
-                "duration": "< 1 week",
-                "ongoing": true,
-                "href": "http://pastasauce.herokuapp.com/"
-            }
-        ]
-    },
-    "contact": {
-        "header": {
-            "lead": "We don't meet people by accident. They are meant to cross our path for a reason."
-        },
-        "handlers": [
-            {
-                "name": "Linkedin",
-                "img": "linkedin.svg",
-                "href": "https://linkedin.com"
-            },
-            {
-                "name": "Linkedin",
-                "img": "linkedin.svg",
-                "href": "https://linkedin.com"
-            },
-            {
-                "name": "Linkedin",
-                "img": "linkedin.svg",
-                "href": "https://linkedin.com"
-            }
-        ],
-        "hire": {
-            "enabled": true,
-            "contact": "+919737177329"
-        }
+    "about_me": "I'm a full-stack developer with a love for JavaScript. I focus on creating web applications that are simplistic and elegant in design. I'm good at finding and fixing problems, and I give extra attention to details. I have an immense interest in learning and trying out new things. I'm comfortable working with people as well as in a solo-mode. I'm output-oriented and strive to deliver my work on time.",
+    "img": "me.jpg",
+    "details": {
+      "name": "Nawaaz Kortiwala",
+      "age": "1993-11-24",
+      "location": "Daman, Daman & Diu (U.T.), India",
+      "hobbies": ["Coding", "Reading", "Photography", "Sports", "Traveling"]
     }
+  },
+  "experiences": {
+    "header": {
+      "lead": "Information is not knowledge. The only source of knowledge is experience. You need experience to gain wisdom - Albert Einstein"
+    },
+    "educations": [
+      {
+        "premise": {
+          "name": "Sinhgad Institutes",
+          "sub": "Savitribai Phule (Pune) University",
+          "href": "http://www.sinhgad.edu/"
+        },
+        "duration": "May 2015 - April 2018",
+        "title": "Degree - Master of Computer Application",
+        "description": "The course was based on a broad curriculum consisting of data structures and algorithms, optimization techniques, probability and combinatorics, object oriented analysis and design, advanced web technologies, and software development to name a few. The course’s concurrent evaluation (CE) consisted of case studies, field visits and study tours, group discussion, industry analysis, and model development / simulation exercises, and live projects.",
+        "location": "Pune"
+      },
+      {
+        "premise": {
+          "name": "SSR ACS",
+          "href": "https://ssracs.edu.in/"
+        },
+        "duration": "May 2012 - April 2015",
+        "title": "Degree - Bachelor of Computer Application",
+        "description": "The graduation course consisted of both technical and business aspects. The curriculum consisted of business subjects such as marketing, management, and accounting. IN the technical dimension, the course taught computer fundamentals, file structure and database concepts, problem solving and algorithms, networking, software engineering concepts, cyber security, and internet programming.",
+        "location": "Silvassa"
+      },
+      {
+        "premise": {
+          "name": "Mahatma Gandhi Vidhyalaya",
+          "href": "https://goo.gl/maps/Twbrg8s5LMjyft3e8"
+        },
+        "duration": "May 2010 - April 2012",
+        "title": "High School - PCM",
+        "description": "Completed HSC (Higher Secondary Certificate) in science with physics, chemistry, and mathematics.",
+        "location": "Daman"
+      }
+    ],
+    "careers": [
+      {
+        "premise": {
+          "name": "Digital Trons",
+          "href": "http://www.digitaltrons.com/"
+        },
+        "duration": "Jan 2021 - Present",
+        "title": "Senior Full Stack Developer",
+        "description": "A senior full-stack developer who is responsible for frontend and backend development of various service-based projects. The main focus of the job is to develop reusable, modular UI components that serve multiple projects in their frontend development. Also, the job consists of backend work which involves creating scalable backends based on the microservice architecture.",
+        "roles": [
+          "UI Designer",
+          "UI Developer",
+          "Team Lead",
+          "Backend Developer"
+        ]
+      },
+      {
+        "premise": {
+          "name": "Freelance"
+        },
+        "duration": "Jan 2018 - Jan 2021",
+        "title": "Full Stack Developer",
+        "description": "A MERN stack developer with proficiency in developing interactive and elegant user-interfaces, and high performant backends. The project undertaken include business information websites, data-scraping projects, chrome extensions, and more.",
+        "roles": [
+          "System analyst",
+          "Architect",
+          "Designer",
+          "Developer",
+          "Tester",
+          "Dev-op"
+        ]
+      },
+      {
+        "premise": {
+          "name": "Enjay IT Solutions",
+          "href": "https://www.enjayworld.com/"
+        },
+        "duration": "Jan 2020 - March 2020",
+        "title": "Full Stack Developer",
+        "description": "A company providing CRM and Cloud Telephony services. The job description consisted on developing a web UI for a pre-existing mobile app and integrating the web UI into the CRM's core.",
+        "roles": ["Assistant project manager", "Front-end developer"]
+      },
+      {
+        "premise": {
+          "name": "Kortiwala Institute of Programming",
+          "href": "http://patkip.herokuapp.com/"
+        },
+        "duration": "March 2019 - Present",
+        "title": "Founder | Course Developer",
+        "description": "A self-founded programming institute that provides education on the basics of computer programming using Python and JavaScript. The main candidates include college students who opted for computer related courses and school students with programming subjects in their curriculum.",
+        "roles": ["Manager", "Course developer", "Tutor"]
+      },
+      {
+        "premise": {
+          "name": "SSR ACS",
+          "href": "https://ssracs.edu.in/"
+        },
+        "duration": "June 2018 - June 2019",
+        "title": "Assistant Professor - Computer Science Department",
+        "description": "A multi-college premise with divisions for graduation and post-graduation degrees. The job role consisted teaching various computer science and programming subjects using theoretical and practical methods. The main task was to figure a logical and analogical yet simple way to convey knowledge of complex computer science topics to complete beginners.",
+        "roles": [
+          "Class coordinator",
+          "Educator",
+          "Practical tutor",
+          "Examiner",
+          "Anchor and speaker"
+        ]
+      }
+    ]
+  },
+  "abilities": {
+    "header": {
+      "lead": "If I have the belief that I can do it, I shall surely acquire the capacity to do it, even if I may not have it at the beginning - Mahatma Gandhi"
+    },
+    "software": [
+      {
+        "name": "HTML",
+        "rank": 5
+      },
+      {
+        "name": "CSS",
+        "rank": 5
+      },
+      {
+        "name": "JavaScript",
+        "rank": 5
+      },
+      {
+        "name": "Bootstrap",
+        "rank": 5
+      },
+      {
+        "name": "Materialize CSS",
+        "rank": 5
+      },
+      {
+        "name": "REST API",
+        "rank": 5
+      },
+      {
+        "name": "ReactJS",
+        "rank": 4
+      },
+      {
+        "name": "TypeScript",
+        "rank": 4
+      },
+      {
+        "name": "Redux",
+        "rank": 4
+      },
+      {
+        "name": "SASS / SCSS",
+        "rank": 4
+      },
+      {
+        "name": "JSS",
+        "rank": 4
+      },
+      {
+        "name": "Node.js",
+        "rank": 4
+      },
+      {
+        "name": "Express.js",
+        "rank": 4
+      },
+      {
+        "name": "MySQL",
+        "rank": 4
+      },
+      {
+        "name": "PostgreSQL",
+        "rank": 4
+      },
+      {
+        "name": "Python",
+        "rank": 4
+      },
+      {
+        "name": "MVC Architecture",
+        "rank": 4
+      },
+      {
+        "name": "Chrome Extension",
+        "rank": 4
+      },
+      {
+        "name": "Flask",
+        "rank": 4
+      },
+      {
+        "name": "JWT",
+        "rank": 4
+      },
+      {
+        "name": "GraphQL",
+        "rank": 3
+      },
+      {
+        "name": "MaterialUI",
+        "rank": 3
+      },
+      {
+        "name": "Atomic Design by Brad Frost",
+        "rank": 3
+      },
+      {
+        "name": "Styled Components",
+        "rank": 3
+      },
+      {
+        "name": "OAuth 2.0",
+        "rank": 3
+      },
+      {
+        "name": "Django",
+        "rank": 3
+      },
+      {
+        "name": "Jinja2",
+        "rank": 3
+      },
+      {
+        "name": "MongoDB",
+        "rank": 3
+      },
+      {
+        "name": "Next.js",
+        "rank": 3
+      },
+      {
+        "name": "jQuery",
+        "rank": 3
+      },
+      {
+        "name": "PHP",
+        "rank": 3
+      },
+      {
+        "name": "Laravel",
+        "rank": 3
+      },
+      {
+        "name": "Bash",
+        "rank": 3
+      },
+
+      {
+        "name": "Handlebars",
+        "rank": "2"
+      }
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "rank": 5
+      },
+      {
+        "name": "Hindi",
+        "rank": 5
+      },
+      {
+        "name": "Gujarati",
+        "rank": 5
+      },
+      {
+        "name": "Marathi",
+        "rank": 2
+      }
+    ],
+    "tools": [
+      {
+        "name": "NPM",
+        "rank": 5
+      },
+      {
+        "name": "Visual Studio Code",
+        "rank": 5
+      },
+      {
+        "name": "Sublime Text 3",
+        "rank": 4
+      },
+      {
+        "name": "Webpack",
+        "rank": 3
+      },
+      {
+        "name": "Babel",
+        "rank": 3
+      },
+      {
+        "name": "Git",
+        "rank": 3
+      },
+      {
+        "name": "Postman",
+        "rank": 3
+      },
+      {
+        "name": "Nginx",
+        "rank": 3
+      },
+      {
+        "name": "AWS",
+        "rank": 3
+      },
+      {
+        "name": "Heroku",
+        "rank": 3
+      },
+      {
+        "name": "Jest",
+        "rank": 3
+      },
+      {
+        "name": "CorelDraw",
+        "rank": 3
+      },
+      {
+        "name": "LAMP / WAMP",
+        "rank": 3
+      },
+      {
+        "name": "SSH",
+        "rank": 3
+      },
+      {
+        "name": "UML",
+        "rank": 3
+      },
+      {
+        "name": "Docker",
+        "rank": 2
+      }
+    ]
+  },
+  "projects": {
+    "header": {
+      "lead": "Quality means doing it right when no one is looking - Henry Ford"
+    },
+    "projects": [
+      {
+        "name": "MerchImpulse",
+        "img": "merchimpulse.png",
+        "description": "A tool to generate top search term for Merch By Amazon (Website + Chrome Extension)",
+        "tags": [
+          "ReactJS",
+          "Redux",
+          "Webpack",
+          "Babel",
+          "Express.js",
+          "MongoDB",
+          "Chrome Extension",
+          "JWT",
+          "Jest",
+          "NGINX",
+          "AWS"
+        ],
+        "duration": "8 months",
+        "ongoing": true,
+        "href": "https://merchimpulse.com"
+      },
+      {
+        "name": "KIP",
+        "img": "kip.png",
+        "description": "Website for Kortiwala Institute of Programming",
+        "tags": ["Next.js", "Bootstrap"],
+        "duration": "1 week",
+        "ongoing": false,
+        "href": "https://patkip.com"
+      },
+      {
+        "name": "Endless Miles",
+        "img": "endlessmiles.png",
+        "description": "A travel planner and event organizer website",
+        "tags": ["Django", "PostgreSQL", "Jinja2", "JavaScript", "Bootstrap"],
+        "duration": "2 months",
+        "ongoing": false,
+        "href": "http://endlessmiles101.herokuapp.com/em/"
+      },
+      {
+        "name": "Shreevarada",
+        "img": "shreevarada.png",
+        "description": "Business information website for Shreevarada Enterprise",
+        "tags": ["Flask", "Jinja2", "Vanilla JavaScript", "Materialize CSS"],
+        "duration": "1 months",
+        "ongoing": false,
+        "href": "http://shreevaradaenterprise.com"
+      },
+      {
+        "name": "GP Alt",
+        "img": "gpalt.png",
+        "description": "A Google People contacts manager app",
+        "tags": [
+          "Laravel",
+          "MySQL",
+          "Vanilla JavaScript",
+          "OAuth 2.0",
+          "Google People REST API"
+        ],
+        "duration": "3 weeks",
+        "ongoing": false,
+        "href": "http://gpalt.herokuapp.com"
+      },
+      {
+        "name": "Pasta Sauce",
+        "img": "pastasauce.png",
+        "description": "A Pomodoro stopwatch (PWA)",
+        "tags": ["HTML", "CSS", "JavaScript", "PWA"],
+        "duration": "< 1 week",
+        "ongoing": true,
+        "href": "http://pastasauce.herokuapp.com/"
+      }
+    ]
+  },
+  "contact": {
+    "header": {
+      "lead": "We don't meet people by accident. They are meant to cross our path for a reason."
+    },
+    "handlers": [
+      {
+        "name": "Linkedin",
+        "img": "linkedin.svg",
+        "href": "https://linkedin.com"
+      },
+      {
+        "name": "Linkedin",
+        "img": "linkedin.svg",
+        "href": "https://linkedin.com"
+      },
+      {
+        "name": "Linkedin",
+        "img": "linkedin.svg",
+        "href": "https://linkedin.com"
+      }
+    ],
+    "hire": {
+      "enabled": true,
+      "contact": "+919737177329"
+    }
+  }
 }
