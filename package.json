@@ -73,7 +73,7 @@
     "immutable": "^4.0.0-rc.12",
     "jquery": "^3.5.1",
     "morgan": "^1.10.0",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "nodemon": "^2.0.6",
     "pm2": "^4.5.1",
     "popper.js": "^1.16.1",
